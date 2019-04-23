@@ -1,24 +1,22 @@
 <template>
   <div class="home">
     <H1>名前</H1>
-    <router-link
-      to="/about/イ"
+
+    <router-link 
+      v-for="letter in first_letters"
+      v-bind:to="letter[1]"
+      :key="letter[0]"
     >
-      <v-btn fab small>あ</v-btn>
+      <v-btn fab small>{{letter[0]}}</v-btn>
     </router-link>
-    <v-btn fab small>い</v-btn>
-    <v-btn fab small>う</v-btn>
-    <v-btn fab small>え</v-btn>
-    <v-btn fab small>お</v-btn>
-    <v-btn fab small>か</v-btn>
-    <v-btn fab small>き</v-btn>
-    <v-btn fab small>く</v-btn>
-    <v-btn fab small>け</v-btn>
-    <v-btn fab small>こ</v-btn>
     <H1>種族</H1>
+    <v-btn small>ノーマル</v-btn>
+    <v-btn small>かくとう</v-btn>
+    <v-btn small>どく</v-btn>
+    <v-btn small>じめん</v-btn>
     <v-btn small>ひこう</v-btn>
     <v-btn small>むし</v-btn>
-    <v-btn small>むし</v-btn>
+    <v-btn small>いわ</v-btn>
     <v-btn small>ゴースト</v-btn>
     <v-btn small>はがね</v-btn>
     <v-btn small>ほのお</v-btn>
@@ -29,14 +27,31 @@
     <v-btn small>エスパ</v-btn>
     <v-btn small>ドラゴン</v-btn>
     <v-btn small>あく</v-btn>
-    <v-btn small>フェアリー</v-btn>
+    <v-btn small>フェアリー</v-btn>  
   </div>
 </template>
 
 <script>
 
-export default {
+module.exports = {
+  data: function () {
+    return {
+      first_letters:
+      [["あ","/about/ア"],["い","/about/イ"],["う","/about/ウ"],["え","/about/エ"],["お","/about/オ"],
+       ["か","/about/カ"],["き","/about/キ"],["く","/about/ク"],["け","/about/ケ"],["こ","/about/コ"],
+       ["さ","/about/サ"],["し","/about/シ"],["す","/about/ス"],["せ","/about/セ"],["そ","/about/ソ"],
+       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
+       ["な","/about/ナ"],["に","/about/二"],["ぬ","/about/ヌ"],["ね","/about/ネ"],["の","/about/ノ"],
+       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
+       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
+       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
+       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
+       ["わ","/about/タ"]
+      ],
+    } 
+  }
 }
+
 </script>
 
 <style>
