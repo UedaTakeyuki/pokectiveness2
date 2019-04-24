@@ -1,55 +1,77 @@
 <template>
   <div class="home">
     <H1>名前</H1>
-
     <router-link 
       v-for="letter in first_letters"
-      v-bind:to="letter[1]"
+      v-bind:to="path_to_about_with_id(letter[0])"
       :key="letter[0]"
     >
       <v-btn fab small>{{letter[0]}}</v-btn>
     </router-link>
     <H1>種族</H1>
-    <v-btn small>ノーマル</v-btn>
-    <v-btn small>かくとう</v-btn>
-    <v-btn small>どく</v-btn>
-    <v-btn small>じめん</v-btn>
-    <v-btn small>ひこう</v-btn>
-    <v-btn small>むし</v-btn>
-    <v-btn small>いわ</v-btn>
-    <v-btn small>ゴースト</v-btn>
-    <v-btn small>はがね</v-btn>
-    <v-btn small>ほのお</v-btn>
-    <v-btn small>みず</v-btn>
-    <v-btn small>でんき</v-btn>
-    <v-btn small>くさ</v-btn>
-    <v-btn small>こおり</v-btn>
-    <v-btn small>エスパ</v-btn>
-    <v-btn small>ドラゴン</v-btn>
-    <v-btn small>あく</v-btn>
-    <v-btn small>フェアリー</v-btn>  
+    <router-link 
+      v-for="(type, key) in types.typename.ja"
+      v-bind:to="path_to_types_with_id(key)"
+      :key="key"
+    >
+      <v-btn small>{{type}}</v-btn>
+    </router-link>
   </div>
 </template>
 
 <script>
 
 module.exports = {
+  props: ['types'],
   data: function () {
     return {
       first_letters:
-      [["あ","/about/ア"],["い","/about/イ"],["う","/about/ウ"],["え","/about/エ"],["お","/about/オ"],
-       ["か","/about/カ"],["き","/about/キ"],["く","/about/ク"],["け","/about/ケ"],["こ","/about/コ"],
-       ["さ","/about/サ"],["し","/about/シ"],["す","/about/ス"],["せ","/about/セ"],["そ","/about/ソ"],
-       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
-       ["な","/about/ナ"],["に","/about/二"],["ぬ","/about/ヌ"],["ね","/about/ネ"],["の","/about/ノ"],
-       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
-       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
-       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
-       ["た","/about/タ"],["ち","/about/チ"],["つ","/about/ツ"],["て","/about/テ"],["と","/about/ト"],
-       ["わ","/about/タ"]
+      [["あ"],["い"],["う"],["え"],["お"],
+       ["か"],["き"],["く"],["け"],["こ"],
+       ["さ"],["し"],["す"],["せ"],["そ"],
+       ["た"],["ち"],["つ"],["て"],["と"],
+       ["な"],["に"],["ぬ"],["ね"],["の"],
+       ["は"],["ひ"],["ふ"],["へ"],["ほ"],
+       ["ま"],["み"],["む"],["め"],["も"],
+       ["た"],["ち"],["つ"],["て"],["と"],
+       ["や"],["ゆ"],["よ"],
+       ["わ"]
       ],
+      typess:
+      ["ノーマル",
+      "かくとう",
+      "どく",
+      "じめん",
+      "ひこう",
+      "むし",
+      "いわ",
+      "ゴースト",
+      "はがね",
+      "ほのお",
+      "みず",
+      "でんき",
+      "くさ",
+      "こおり",
+      "エスパ",
+      "ドラゴン",
+      "あく",
+      "フェアリー"
+      ]
     } 
-  }
+  },
+// https://qiita.com/satetsu888/items/abd67917097ee00d768d
+  methods: {   
+    hiraToKana: function(str){
+      return String.fromCharCode(str.charCodeAt(0) + 0x60)
+//      return String.fromCharCode(str[0] +0x60);
+    },
+    path_to_about_with_id: function(hirakana){
+      return "/about/" + this.hiraToKana(hirakana);
+    },
+    path_to_types_with_id: function(id){
+      return "/types/" + id;
+    }
+  },
 }
 
 </script>
