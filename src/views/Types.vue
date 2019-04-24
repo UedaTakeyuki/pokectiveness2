@@ -10,24 +10,33 @@
     </router-link>
 
     <v-card color="blue-grey darken-2" class="white--text">
-      <v-card-title primary-title>
-        {{types.typename[s_lang][$route.params.id]}}
+      <v-card-title primary-title >
+        <h3>{{types.typename[s_lang][$route.params.id]}}</h3>
       </v-card-title>
-      {{types.wording[s_lang].supper}}
-        <v-btn v-for="(item, key) in types.suppereffective[$route.params.id]" :key="key" v-bind:color="types.chipscolor[item]">
-          {{types.typename[s_lang][item]}}
-        </v-btn>
-      <br>
+      <v-card>
+      <v-card-title primary-title>
+        {{types.wording[s_lang].supper}}
+      </v-card-title>
+      <v-btn v-for="item in types.suppereffective[$route.params.id]" :key="item" v-bind:color="types.chipscolor[item]">
+        {{types.typename[s_lang][item]}}
+      </v-btn>
+      </v-card>
+      <v-card>
+      <v-card-title primary-title>
       {{types.wording[s_lang].not}}
-        <v-btn v-for="(item, key) in types.notveryeffective[$route.params.id]" :key="key" v-bind:color="types.chipscolor[item]">
+      </v-card-title>
+        <v-btn v-for="item in types.notveryeffective[$route.params.id]" :key="item" v-bind:color="types.chipscolor[item]">
           {{types.typename[s_lang][item]}}
         </v-btn>
-      <br>
+      </v-card>
+      <v-card>
+      <v-card-title primary-title>
       {{types.wording[s_lang].no}}
-        <v-btn v-for="(item, key) in types.noeffect[$route.params.id]" :key="key" v-bind:color="types.chipscolor[item]">
+      </v-card-title>
+        <v-btn v-for="item in types.noeffect[$route.params.id]" :key="item" v-bind:color="types.chipscolor[item]">
           {{types.typename[s_lang][item]}}
         </v-btn>
-      <br>
+      </v-card>
 
     </v-card>
     <v-btn small v-for="(pokemon, index) in poke.filter(member => member.type.includes($route.params.id))" :key="index">{{pokemon.name.japanese}}</v-btn>
