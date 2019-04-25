@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Types from './views/Types.vue'
 import Pokemon from './views/Pokemon.vue'
-import pokedex from './pokedex'
-import types from './typeeffectiveness'
+//import pokedex from './pokedex'
+//import types from './typeeffectiveness'
 
 Vue.use(Router);
 //const name_a = pokedex.filter(member => member.name.japanese[0] == "ア");
@@ -17,13 +17,13 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      props: {types: types}
+      props: {}
     },
     {
       path: '/types/:id',
       name: 'types',
       component: Types,
-      props: {types: types, poke: pokedex}
+      props: {}
     },
     {
       path: '/pokemon/:id',

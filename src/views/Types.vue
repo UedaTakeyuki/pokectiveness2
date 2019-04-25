@@ -40,7 +40,7 @@
 
     </v-card>
     <router-link 
-      v-for="(pokemon, index) in poke.filter(member => member.type.includes($route.params.id))"
+      v-for="(pokemon, index) in pokemons.filter(member => member.type.includes($route.params.id))"
       v-bind:to="path_to_pokemon_with_id(pokemon.id)"
       :key="index"
     >
@@ -59,14 +59,18 @@
 </style>
 
 <script>
-//import dix from '../components/pokedex';
+import pokemons from '../pokedex';
+import types from '../typeeffectiveness';
 
-module.exports = {
-  props: ['types','poke'],
+//module.exports = {
+export default {
+  props: [],
   data: function () {
     return {
       s_lang: "ja",
       l_lang: "japanese",
+      pokemons: pokemons,
+      types: types,
     }
   },
   methods: {

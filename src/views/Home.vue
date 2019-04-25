@@ -20,11 +20,14 @@
 </template>
 
 <script>
+import types from '../typeeffectiveness';
 
-module.exports = {
-  props: ['types'],
+//module.exports = {
+export default {
+  props: [],
   data: function () {
     return {
+      types: types,
       first_letters:
 /*
       [["あ"],["い"],["う"],["え"],["お"],
