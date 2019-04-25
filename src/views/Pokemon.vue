@@ -5,7 +5,7 @@
           :src="require('@/assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + $route.params.id ).slice( -3 )+'.gif')"
       ></v-img>
       <v-card-title primary-title >
-        <h3>{{poke[$route.params.id - 1].name[l_lang]}}</h3>
+        <h3>{{pokemons[$route.params.id - 1].name[l_lang]}}</h3>
       </v-card-title>
     </v-card>
   </div>
@@ -21,10 +21,12 @@
 </style>
 
 <script>
-//import dix from '../components/pokedex';
+import pokemons from '../pokedex';
+import types from '../typeeffectiveness';
 
-module.exports = {
-  props: ['poke', 'types'],
+//module.exports = {
+export default {
+  props: [],
   data: function () {
     return {
       s_lang: "ja",

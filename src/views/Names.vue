@@ -6,7 +6,7 @@
       :key="index"
     >-->
     <router-link 
-      v-for="(pokemon, index) in pokemon_whose_name_start_with($route.params.id, poke)" 
+      v-for="(pokemon, index) in pokemon_whose_name_start_with($route.params.id)" 
       v-bind:to="path_to_types_with_id(pokemon.id)"
       :key="index"
     >
@@ -26,11 +26,11 @@
 </style>
 
 <script>
-//import dix from '../components/pokedex';
+import pokemons from '../pokedex';
 
 //module.exports = {
 export default {
-  props: ['poke'],
+  props: [],
   data: function () {
     return {
       s_lang: "ja",
@@ -38,8 +38,9 @@ export default {
     }
   },
   methods: {
-    pokemon_whose_name_start_with(str, list){
-      return list.filter(member => this.is_start_with(member.name.japanese[0],str));
+    pokemon_whose_name_start_with(str){
+//      return list.filter(member => this.is_start_with(member.name.japanese[0],str));
+      return pokemons.filter(member => this.is_start_with(member.name.japanese[0],str));
     },
     is_start_with(c, str){
       for (let i in str.split("")){
