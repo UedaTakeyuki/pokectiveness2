@@ -1,7 +1,12 @@
 <template>
   <div class="names">
-    <router-link 
+<!--    <router-link 
       v-for="(pokemon, index) in poke.filter(member => member.name.japanese[0] == $route.params.id)"
+      v-bind:to="path_to_types_with_id(pokemon.id)"
+      :key="index"
+    >-->
+    <router-link 
+      v-for="(pokemon, index) in pokemon_whose_name_start_with($route.params.id, poke)" 
       v-bind:to="path_to_types_with_id(pokemon.id)"
       :key="index"
     >
@@ -23,7 +28,8 @@
 <script>
 //import dix from '../components/pokedex';
 
-module.exports = {
+//module.exports = {
+export default {
   props: ['poke'],
   data: function () {
     return {
@@ -32,6 +38,17 @@ module.exports = {
     }
   },
   methods: {
+    pokemon_whose_name_start_with(str, list){
+      return list.filter(member => this.is_start_with(member.name.japanese[0],str));
+    },
+    is_start_with(c, str){
+      for (let i in str.split("")){
+        if (c == str[i]){
+          return true;
+        }
+      }
+      return false;
+    },
     path_to_types_with_id: function(id){
 //      return "/pokemon/" + this.props.poke.filter(member => member.name[this.l_lang] == nm)[0].id;
       return "/pokemon/" + id;

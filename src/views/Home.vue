@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <H1>名前</H1>
-    <router-link 
+   <router-link 
       v-for="letter in first_letters"
-      v-bind:to="path_to_names_with_id(letter[0])"
+      v-bind:to="path_to_names_with_id(letter[1])"
       :key="letter[0]"
     >
       <v-btn fab small>{{letter[0]}}</v-btn>
@@ -26,6 +26,7 @@ module.exports = {
   data: function () {
     return {
       first_letters:
+/*
       [["あ"],["い"],["う"],["え"],["お"],
        ["か"],["き"],["く"],["け"],["こ"],
        ["さ"],["し"],["す"],["せ"],["そ"],
@@ -37,6 +38,18 @@ module.exports = {
        ["ら"],["り"],["る"],["れ"],["ろ"],
        ["わ"]
       ],
+*/
+      [["あ","ア"],["い","イ"],["う","ウ"],["え","エ"],["お","オ"],
+       ["か","カガ"],["き","キギ"],["く","クグ"],["け","ケゲ"],["こ","コゴ"],
+       ["さ","サザ"],["し","シジ"],["す","スズ"],["せ","セぜ"],["そ","ソゾ"],
+       ["た","タダ"],["ち","チヂ"],["つ","ツヅ"],["て","テデ"],["と","トド"],
+       ["な","ナ"],["に","ニ"],["ぬ","ヌ"],["ね","ネ"],["の","ノ"],
+       ["は","ハバパ"],["ひ","ヒビピ"],["ふ","フブプ"],["へ","ヘベペ"],["ほ","ホボポ"],
+       ["ま","マ"],["み","ミ"],["む","ム"],["め","メ"],["も","モ"],
+       ["や","ヤ"],["ゆ","ユ"],["よ","ヨ"],
+       ["ら","ラ"],["り","リ"],["る","ル"],["れ","レ"],["ろ","ロ"],
+       ["わ","ワ"]
+      ],
     } 
   },
 // https://qiita.com/satetsu888/items/abd67917097ee00d768d
@@ -45,8 +58,9 @@ module.exports = {
       return String.fromCharCode(str.charCodeAt(0) + 0x60)
 //      return String.fromCharCode(str[0] +0x60);
     },
-    path_to_names_with_id: function(hirakana){
-      return "/names/" + this.hiraToKana(hirakana);
+    path_to_names_with_id: function(id){
+//      return "/names/" + this.hiraToKana(hirakana);
+      return "/names/" + id;
     },
     path_to_types_with_id: function(id){
       return "/types/" + id;
