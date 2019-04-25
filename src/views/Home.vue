@@ -3,7 +3,7 @@
     <H1>名前</H1>
     <router-link 
       v-for="letter in first_letters"
-      v-bind:to="path_to_about_with_id(letter[0])"
+      v-bind:to="path_to_names_with_id(letter[0])"
       :key="letter[0]"
     >
       <v-btn fab small>{{letter[0]}}</v-btn>
@@ -45,8 +45,8 @@ module.exports = {
       return String.fromCharCode(str.charCodeAt(0) + 0x60)
 //      return String.fromCharCode(str[0] +0x60);
     },
-    path_to_about_with_id: function(hirakana){
-      return "/about/" + this.hiraToKana(hirakana);
+    path_to_names_with_id: function(hirakana){
+      return "/names/" + this.hiraToKana(hirakana);
     },
     path_to_types_with_id: function(id){
       return "/types/" + id;

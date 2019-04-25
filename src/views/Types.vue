@@ -3,7 +3,7 @@
     {{$route.params.id}}
     <router-link 
       v-for="(familyname, index) in types.familyname"
-      v-bind:to="path_to_types_with_id(index)"
+      v-bind:to="path_to_names_with_id(index)"
       :key="index"
     >
       <v-btn small>{{familyname}}</v-btn>
@@ -66,8 +66,8 @@ module.exports = {
     hiraToKana: function(str){
       return String.fromCharCode(str.charCodeAt(0) + 0x60)
     },
-    path_to_about_with_id: function(hirakana){
-      return "/about/" + this.hiraToKana(hirakana);
+    path_to_names_with_id: function(hirakana){
+      return "/names/" + this.hiraToKana(hirakana);
     },
     path_to_types_with_id: function(id){
       return "/types/" + id;

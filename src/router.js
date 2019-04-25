@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Types from './views/Types.vue'
+import Pokemon from './views/Pokemon.vue'
 import pokedex from './pokedex'
 import types from './typeeffectiveness'
 
@@ -25,14 +26,21 @@ export default new Router({
       props: {types: types, poke: pokedex}
     },
     {
-      path: '/about/:id',
-      name: 'about',
+      path: '/pokemon/:id',
+      name: 'pokemon',
+      component: Pokemon,
+      props: {types: types, poke: pokedex}
+    },
+    {
+      path: '/names/:id',
+      name: 'names',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import(/* webpackChunkName: "about" */ './views/Names.vue'),
       props: {poke: pokedex}
 //      props: {poke: name_a}
-    }
+    },
+
   ]
 })
