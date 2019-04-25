@@ -7,7 +7,7 @@
     >-->
     <router-link 
       v-for="(pokemon, index) in pokemon_whose_name_start_with($route.params.id)" 
-      v-bind:to="path_to_types_with_id(pokemon.id)"
+      v-bind:to="path_to_pokemon_with_id(pokemon.id)"
       :key="index"
     >
 <!--      <v-btn small v-for="(pokemon, index) in poke.filter(member => member.name.japanese[0] == $route.params.id)" :key="index">{{pokemon.name.japanese}}</v-btn> -->
@@ -50,7 +50,7 @@ export default {
       }
       return false;
     },
-    path_to_types_with_id: function(id){
+    path_to_pokemon_with_id: function(id){
 //      return "/pokemon/" + this.props.poke.filter(member => member.name[this.l_lang] == nm)[0].id;
       return "/pokemon/" + id;
     },

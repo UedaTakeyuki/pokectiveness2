@@ -31,6 +31,8 @@ export default {
     return {
       s_lang: "ja",
       l_lang: "japanese",
+      pokemons: pokemons,
+      types: types
     }
   },
   methods: {
