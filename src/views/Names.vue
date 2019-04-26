@@ -27,14 +27,16 @@
 
 <script>
 import pokemons from '../pokedex';
+//let pokemons = require('../pokedex');
 
-//module.exports = {
+// module.exports = { // TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
 export default {
   props: [],
   data: function () {
     return {
       s_lang: "ja",
       l_lang: "japanese",
+      pokemons: pokemons,
     }
   },
   methods: {

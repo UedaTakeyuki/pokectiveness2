@@ -1,2 +1,4 @@
 2019.04.23 start 
 2019.04.24 Types vue
+2019.04.25 Pokemon vue
+           Unify module system as CJS.
