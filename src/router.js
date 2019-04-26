@@ -7,7 +7,6 @@ import Pokemon from './views/Pokemon.vue'
 //import types from './typeeffectiveness'
 
 Vue.use(Router);
-//const name_a = pokedex.filter(member => member.name.japanese[0] == "ア");
 
 export default new Router({
   mode: 'history',
