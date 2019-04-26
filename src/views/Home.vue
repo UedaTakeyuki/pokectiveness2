@@ -1,21 +1,39 @@
 <template>
   <div class="home">
-    <H1>名前</H1>
-   <router-link 
-      v-for="letter in first_letters"
-      v-bind:to="path_to_names_with_id(letter[1])"
-      :key="letter[0]"
-    >
-      <v-btn fab small>{{letter[0]}}</v-btn>
-    </router-link>
-    <H1>種族</H1>
-    <router-link 
-      v-for="(type, key) in types.typename.ja"
-      v-bind:to="path_to_types_with_id(key)"
-      :key="key"
-    >
-      <v-btn small v-bind:color="types.chipscolor[key]">{{type}}</v-btn>
-    </router-link>
+    <v-expansion-panel>
+      <v-expansion-panel-content>
+        <template v-slot:actions>
+          <v-icon color="primary">$vuetify.icons.expand</v-icon>
+        </template>
+        <template v-slot:header>
+          <div>名前</div>
+        </template>
+        <router-link 
+          v-for="letter in first_letters"
+          v-bind:to="path_to_names_with_id(letter[1])"
+          :key="letter[0]"
+        >
+          <v-btn fab small>{{letter[0]}}</v-btn>
+        </router-link>
+      </v-expansion-panel-content>
+
+      <v-expansion-panel-content>
+        <template v-slot:actions>
+        <v-icon color="primary">$vuetify.icons.expand</v-icon>
+        </template>
+        <template v-slot:header>
+        <div>種族</div>
+        </template>
+        <router-link 
+          v-for="(type, key) in types.typename.ja"
+          v-bind:to="path_to_types_with_id(key)"
+          :key="key"
+        >
+          <v-btn small v-bind:color="types.chipscolor[key]">{{type}}</v-btn>
+        </router-link>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
   </div>
 </template>
 
