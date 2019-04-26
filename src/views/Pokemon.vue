@@ -7,6 +7,8 @@
       <v-card-title primary-title >
         <h3>{{pokemons[$route.params.id - 1].name[l_lang]}}</h3>
       </v-card-title>
+      <p>英語名：{{pokemons[$route.params.id - 1].name["english"]}}</p>
+      <p>中国名：{{pokemons[$route.params.id - 1].name["chinese"]}}</p>
     </v-card>
   </div>
 </template>

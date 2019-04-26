@@ -24,7 +24,7 @@
       <v-card-title primary-title >
         <h3>{{types.typename[s_lang][$route.params.id]}}</h3>
       </v-card-title>
-      <v-card>
+      <v-card color="blue-grey lighten-4">
       <v-card-title primary-title>
         {{types.wording[s_lang].supper}}
       </v-card-title>
@@ -32,7 +32,7 @@
         {{types.typename[s_lang][item]}}
       </v-btn>
       </v-card>
-      <v-card>
+      <v-card color="blue-grey lighten-4">
       <v-card-title primary-title>
       {{types.wording[s_lang].not}}
       </v-card-title>
@@ -40,7 +40,7 @@
           {{types.typename[s_lang][item]}}
         </v-btn>
       </v-card>
-      <v-card>
+      <v-card color="blue-grey lighten-4">
       <v-card-title primary-title>
       {{types.wording[s_lang].no}}
       </v-card-title>
@@ -58,7 +58,7 @@
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
         <template v-slot:header>
-          <div>この種族のポケモン</div>
+          <div >この種族のポケモン</div>
         </template>
 
     <router-link 
