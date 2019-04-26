@@ -1,6 +1,14 @@
 <template>
   <div class="types">
-    {{$route.params.id}}
+    <v-expansion-panel>
+      <v-expansion-panel-content>
+        <template v-slot:actions>
+          <v-icon color="primary">$vuetify.icons.expand</v-icon>
+        </template>
+        <template v-slot:header>
+          <div>種族一覧</div>
+        </template>
+
     <router-link 
       v-for="(familyname, id) in types.familyname"
       v-bind:to="path_to_types_with_id(id)"
@@ -8,6 +16,9 @@
     >
       <v-btn small>{{familyname}}</v-btn>
     </router-link>
+
+      </v-expansion-panel-content>
+    </v-expansion-panel>
 
     <v-card color="blue-grey darken-2" class="white--text">
       <v-card-title primary-title >
@@ -39,6 +50,17 @@
       </v-card>
 
     </v-card>
+
+
+    <v-expansion-panel>
+      <v-expansion-panel-content>
+        <template v-slot:actions>
+          <v-icon color="primary">$vuetify.icons.expand</v-icon>
+        </template>
+        <template v-slot:header>
+          <div>この種族のポケモン</div>
+        </template>
+
     <router-link 
       v-for="(pokemon, index) in pokemons.filter(member => member.type.includes($route.params.id))"
       v-bind:to="path_to_pokemon_with_id(pokemon.id)"
@@ -46,6 +68,10 @@
     >
       <v-btn small>{{pokemon.name[l_lang]}}</v-btn>
     </router-link>
+
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
   </div>
 </template>
 

@@ -19,10 +19,10 @@
 
       <v-expansion-panel-content>
         <template v-slot:actions>
-        <v-icon color="primary">$vuetify.icons.expand</v-icon>
+          <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
         <template v-slot:header>
-        <div>種族</div>
+          <div>種族</div>
         </template>
         <router-link 
           v-for="(type, key) in types.typename.ja"
