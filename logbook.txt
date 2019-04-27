@@ -5,3 +5,4 @@
 2019.04.26 Nabver, Footer
            Expansion panel
            Pokemon name
+2019.04.27 Basic feature complete
