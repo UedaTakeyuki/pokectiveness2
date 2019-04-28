@@ -12,15 +12,6 @@
       <div>中国名：{{pokemons[$route.params.id - 1].name["chinese"]}}</div>
       種族：
       <TypeButton v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id" :type_id="type_id" :lang="s_lang" />
-<!--
-      <router-link 
-        v-for="familyname in pokemons[$route.params.id - 1].type"
-        v-bind:to="path_to_types_with_id(familyname)"
-        :key="familyname"
-      >
-        <v-btn small>{{familyname}}</v-btn>
-      </router-link>
--->
     </v-card>
 
   </div>
@@ -53,9 +44,6 @@ export default {
     }
   },
   methods: {
-    path_to_types_with_id: function(id){
-      return "/types/" + id;
-    },
   },
 }
 </script>

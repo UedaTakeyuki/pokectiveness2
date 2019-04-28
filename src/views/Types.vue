@@ -48,17 +48,7 @@
         <template v-slot:header>
           <div >この種族のポケモン</div>
         </template>
-        {{pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})}}
         <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
-<!--
-    <router-link 
-      v-for="(pokemon, index) in pokemons.filter(member => member.type.includes($route.params.id))"
-      v-bind:to="path_to_pokemon_with_id(pokemon.id)"
-      :key="index"
-    >
-      <v-btn small>{{pokemon.name[l_lang]}}</v-btn>
-    </router-link>
--->
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -93,14 +83,6 @@ export default {
     }
   },
   methods: {
-    path_to_types_with_id: function(id){
-      return "/types/" + id;
-    },
-    path_to_pokemon_with_id: function(id){
-//      return "/pokemon/" + this.props.poke.filter(member => member.name[this.l_lang] == nm)[0].id;
-      return "/pokemon/" + id;
-    },
-
   },
 
 }
