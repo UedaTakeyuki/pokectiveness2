@@ -1,28 +1,25 @@
 <template>
   <div class="pokemon">
     <v-card color="blue-grey darken-2" class="white--text">
+      <h3>{{pokemons[$route.params.id - 1].name[l_lang]}}</h3>
       <v-img
           :src="require('@/assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + $route.params.id ).slice( -3 )+'.gif')"
       >
-      <v-card-title primary-title >
-        <h3>{{pokemons[$route.params.id - 1].name[l_lang]}}</h3>
-      </v-card-title>
-      <v-container pa-3
-      >
+      </v-img>
+      <div>No. {{$route.params.id}}</div>
       <div>日本名：{{pokemons[$route.params.id - 1].name["japanese"]}}</div>
       <div>英語名：{{pokemons[$route.params.id - 1].name["english"]}}</div>
       <div>中国名：{{pokemons[$route.params.id - 1].name["chinese"]}}</div>
-      </v-container>
-      </v-img>
+      種族：
+      <router-link 
+        v-for="familyname in pokemons[$route.params.id - 1].type"
+        v-bind:to="path_to_types_with_id(familyname)"
+        :key="familyname"
+      >
+        <v-btn small>{{familyname}}</v-btn>
+      </router-link>
     </v-card>
-    種族：
-    <router-link 
-      v-for="familyname in pokemons[$route.params.id - 1].type"
-      v-bind:to="path_to_types_with_id(familyname)"
-      :key="familyname"
-    >
-      <v-btn small>{{familyname}}</v-btn>
-    </router-link>
+
   </div>
 </template>
 
