@@ -48,7 +48,9 @@
         <template v-slot:header>
           <div >この種族のポケモン</div>
         </template>
-
+        {{pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})}}
+        <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
+<!--
     <router-link 
       v-for="(pokemon, index) in pokemons.filter(member => member.type.includes($route.params.id))"
       v-bind:to="path_to_pokemon_with_id(pokemon.id)"
@@ -56,7 +58,7 @@
     >
       <v-btn small>{{pokemon.name[l_lang]}}</v-btn>
     </router-link>
-
+-->
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -76,11 +78,12 @@
 import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
+import NameButton from '@/components/NameButton'
 
 //module.exports = {
 export default {
   props: [],
-  components: {TypeButton},
+  components: {TypeButton, NameButton},
   data: function () {
     return {
       s_lang: "ja",

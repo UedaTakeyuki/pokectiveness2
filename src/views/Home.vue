@@ -24,16 +24,7 @@
         <template v-slot:header>
           <div>種族</div>
         </template>
-      <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
-<!--
-        <router-link 
-          v-for="(type, key) in types.typename.ja"
-          v-bind:to="path_to_types_with_id(key)"
-          :key="key"
-        >
-          <v-btn small v-bind:color="types.chipscolor[key]">{{type}}</v-btn>
-        </router-link>
--->
+        <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-expansion-panel-content>
     </v-expansion-panel>
 

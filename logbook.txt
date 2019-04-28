@@ -9,3 +9,4 @@
 2019.04.28 add apple-touch-icon
            back navigation
            TypeButton
+           NameButton
