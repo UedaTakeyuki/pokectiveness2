@@ -43,7 +43,7 @@ export default
 			Fairy: "FAIRY",
 		},
     ja:{
-			Normal: "ノーマル	",
+			Normal: "ノーマル",
 			Fighting: "かくとう",
 			Poison: "どく",
 			Ground: "じめん",
@@ -61,6 +61,28 @@ export default
 			Dragon: "ドラゴン",
 			Dark: "あく",
 			Fairy: "フェアリー",
+			}
+		},
+// https://www.reddit.com/r/TheSilphRoad/comments/5417te/chinese_characters_for_naming_your_pokemon_move/		
+		cn:{
+			Normal: "普	",
+			Fighting: "武",
+			Poison: "武",
+			Ground: "土",
+			Flying: "空",
+			Bug: "虫",
+			Rock: "石",
+			Ghost: "鬼",
+			Steel: "钢",
+			Fire: "火",
+			Water: "水",
+			Electric: "电",
+			Grass: "草",
+			Ice: "冰",
+			Psychic: "神",
+			Dragon: "龙",
+			Dark: "恶 ",
+			Fairy: "妖",
 			}
     },
     familyname: {
