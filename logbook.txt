@@ -10,3 +10,4 @@
            back navigation
            TypeButton
            NameButton
+           Weakpoint info
