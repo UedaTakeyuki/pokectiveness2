@@ -7,3 +7,4 @@
            Pokemon name
 2019.04.27 Basic feature complete
 2019.04.28 add apple-touch-icon
+           back navigation
