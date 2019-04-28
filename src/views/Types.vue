@@ -14,16 +14,6 @@
           :lang="s_lang"
           :key="id"
         />
-
-<!--
-    <router-link 
-      v-for="(familyname, id) in types.familyname"
-      v-bind:to="path_to_types_with_id(id)"
-      :key="id"
-    >
-      <v-btn small>{{familyname}}</v-btn>
-    </router-link>
--->
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -31,29 +21,20 @@
       <v-card-title primary-title >
         <h3>{{types.typename[s_lang][$route.params.id]}}</h3>
       </v-card-title>
+     
       <v-card color="blue-grey lighten-4">
-      <v-card-title primary-title>
         {{types.wording[s_lang].supper}}
-      </v-card-title>
-      <v-btn v-for="item in types.suppereffective[$route.params.id]" :key="item" v-bind:color="types.chipscolor[item]">
-        {{types.typename[s_lang][item]}}
-      </v-btn>
+      <TypeButton v-for="type_id in types.suppereffective[$route.params.id]" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-card>
+      
       <v-card color="blue-grey lighten-4">
-      <v-card-title primary-title>
       {{types.wording[s_lang].not}}
-      </v-card-title>
-        <v-btn v-for="item in types.notveryeffective[$route.params.id]" :key="item" v-bind:color="types.chipscolor[item]">
-          {{types.typename[s_lang][item]}}
-        </v-btn>
+      <TypeButton v-for="type_id in types.notveryeffective[$route.params.id]" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-card>
+      
       <v-card color="blue-grey lighten-4">
-      <v-card-title primary-title>
       {{types.wording[s_lang].no}}
-      </v-card-title>
-        <v-btn v-for="item in types.noeffect[$route.params.id]" :key="item" v-bind:color="types.chipscolor[item]">
-          {{types.typename[s_lang][item]}}
-        </v-btn>
+        <TypeButton v-for="type_id in types.noeffect[$route.params.id]" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-card>
 
     </v-card>
