@@ -62,7 +62,7 @@ export default
 			Dark: "あく",
 			Fairy: "フェアリー",
 		},
-			// https://www.reddit.com/r/TheSilphRoad/comments/5417te/chinese_characters_for_naming_your_pokemon_move/		
+		// https://www.reddit.com/r/TheSilphRoad/comments/5417te/chinese_characters_for_naming_your_pokemon_move/		
 		cn:{
 			Normal: "普	",
 			Fighting: "武",
@@ -82,6 +82,27 @@ export default
 			Dragon: "龙",
 			Dark: "恶 ",
 			Fairy: "妖",
+		},
+		// http://hakadoru000matome.blog.fc2.com/blog-entry-3.html
+		fr:{
+			Normal: "Normal",
+			Fighting: "Combat",
+			Poison: "Poison",
+			Ground: "Sol",
+			Flying: "Vol",
+			Bug: "Insecte",
+			Rock: "Roche",
+			Ghost: "Spectre",
+			Steel: "Acier",
+			Fire: "Feu",
+			Water: "Eau",
+			Electric: "Électrik",
+			Grass: "Plante",
+			Ice: "Glace",
+			Psychic: "Psy",
+			Dragon: "Dragon",
+			Dark: "Ténèbres",
+			Fairy: "Fée",
 		},
 	},
   familyname: {
