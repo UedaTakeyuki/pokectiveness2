@@ -17,15 +17,6 @@
   </div>
 </template>
 
-<style>
-/* https://stackoverflow.com/questions/47331310/changing-vuetifys-button-width-and-padding */
-.v-btn {
-  min-width: 0;
-/*  padding: 0; */
-  margin: 0;
-}
-</style>
-
 <script>
 import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
