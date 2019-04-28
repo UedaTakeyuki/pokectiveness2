@@ -8,7 +8,14 @@
         <template v-slot:header>
           <div>種族一覧</div>
         </template>
+        <TypeButton 
+          v-for="id in types.ids"
+          :type_id="id"
+          :lang="s_lang"
+          :key="id"
+        />
 
+<!--
     <router-link 
       v-for="(familyname, id) in types.familyname"
       v-bind:to="path_to_types_with_id(id)"
@@ -16,7 +23,7 @@
     >
       <v-btn small>{{familyname}}</v-btn>
     </router-link>
-
+-->
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -87,10 +94,12 @@
 <script>
 import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
+import TypeButton from '@/components/TypeButton'
 
 //module.exports = {
 export default {
   props: [],
+  components: {TypeButton},
   data: function () {
     return {
       s_lang: "ja",
