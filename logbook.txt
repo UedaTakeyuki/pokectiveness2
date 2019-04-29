@@ -11,3 +11,5 @@
            TypeButton
            NameButton
            Weakpoint info
+2019.04.29 Menu
+           prepare alola info
