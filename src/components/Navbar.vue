@@ -3,7 +3,7 @@
     <v-toolbar app>
       <v-toolbar-side-icon class="grey--text" @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title class="grey--text">
-        <span class="font-weight-light" style="font-family: 'Parisienne', cursive; text-shadow: 4px 4px 4px #aaa; font-size: 110%;">Pokéctiveness</span>
+        <span class="font-weight-light" style="font-family: 'Parisienne', cursive; text-shadow: 4px 4px 4px #aaa; font-size: 110%;">Pokéctiveness2</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn flat class="grey--text" v-if="$route.name != 'home'" @click="$router.back()">
@@ -13,6 +13,17 @@
 
     <v-navigation-drawer v-model="drawer" app class="primary">
       <v-list>
+      <v-layout column align-center class="white--text">
+        <v-flex>
+          <v-avatar size="100">
+            <v-img 
+              :src="require('@/assets/chart.png/')"
+            >
+            </v-img>
+          </v-avatar>
+        </v-flex>
+        このアプリの QRコード
+      </v-layout>
         <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
           <v-list-tile-action>
             <v-icon class="white--text">{{link.icon}}</v-icon>

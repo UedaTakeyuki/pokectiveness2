@@ -13,3 +13,5 @@
            Weakpoint info
 2019.04.29 Menu
            prepare alola info
+
+2019.05.01 add QR link to nav-link
