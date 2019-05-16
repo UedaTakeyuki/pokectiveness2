@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Pokéctiveness2',
   description: 'Pokémon move effectiveness chart.',
-  dest: 'dist/docs'
+  dest: 'dist/docs',
+  base: '/docs/'
 }
