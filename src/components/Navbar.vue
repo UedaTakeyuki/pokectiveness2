@@ -13,17 +13,17 @@
 
     <v-navigation-drawer v-model="drawer" app class="primary">
       <v-list>
-      <v-layout column align-center class="white--text">
-        <v-flex>
-          <v-avatar size="100">
-            <v-img 
-              :src="require('@/assets/chart.png/')"
-            >
-            </v-img>
-          </v-avatar>
-        </v-flex>
-        このアプリの QRコード
-      </v-layout>
+        <v-layout column align-center class="white--text">
+          <v-flex>
+            <v-avatar size="100">
+              <v-img 
+                :src="require('@/assets/qr.png/')"
+              >
+              </v-img>
+            </v-avatar>
+          </v-flex>
+          このアプリの QRコード
+        </v-layout>
         <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
           <v-list-tile-action>
             <v-icon class="white--text">{{link.icon}}</v-icon>
@@ -44,6 +44,8 @@ export default {
       drawer: false,
       links: [
         {icon: 'home', text: 'Home', route: '/'},
+        {icon: '', text: 'How To Use', route: '/docs'},
+        {icon: '', text: '使い方', route: '/docs/ja'},
       ]
     }
   }
