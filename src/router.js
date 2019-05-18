@@ -40,6 +40,17 @@ export default new Router({
       props: {}
 //      props: {poke: name_a}
     },
+// refer https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-external-website
+    {
+      path: '/docs',
+      name: 'docs',
+      beforeEnter() {location.href = '/docs'}
+    },
+    {
+      path: '/docs/ja',
+      name: 'docs/ja',
+      beforeEnter() {location.href = '/docs/ja'}
+    },
 
   ]
 })
