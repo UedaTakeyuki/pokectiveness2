@@ -1,6 +1,10 @@
 <template>
   <div class="names">
-    <NameButton v-for="poke_id in pokemon_whose_name_start_with($route.params.id).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
+    <NameButton v-for="poke_id in pokemon_whose_name_start_with($route.params.id).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})"
+                :key="poke_id" 
+                :poke_id="poke_id" 
+                :lang="l_lang"
+    />
   </div>
 </template>
 
@@ -37,10 +41,8 @@ export default {
       switch(this.$lang){
         case "ja":
           return "japanese";
-          break;
         default:
           return "english";
-          break;
       }
     }
   }
