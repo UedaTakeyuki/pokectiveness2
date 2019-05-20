@@ -15,15 +15,13 @@ export default {
   components: {NameButton},
   data: function () {
     return {
-      s_lang: "ja",
-      l_lang: "japanese",
       pokemons: pokemons,
     }
   },
   methods: {
     pokemon_whose_name_start_with(str){
 //      return list.filter(member => this.is_start_with(member.name.japanese[0],str));
-      return pokemons.filter(member => this.is_start_with(member.name.japanese[0],str));
+      return pokemons.filter(member => this.is_start_with(member.name[this.l_lang][0],str));
     },
     is_start_with(c, str){
       for (let i in str.split("")){
@@ -34,5 +32,17 @@ export default {
       return false;
     },
   },
+  computed: {
+    l_lang: function(){
+      switch(this.$lang){
+        case "ja":
+          return "japanese";
+          break;
+        default:
+          return "english";
+          break;
+      }
+    }
+  }
 }
 </script>
