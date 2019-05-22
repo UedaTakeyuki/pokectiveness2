@@ -6,9 +6,11 @@ module.exports = {
 //  dest: 'public/docs',
 //  base: '/public/docs/',
 
+/*
   themeConfig: {
     sidebar: 'auto'
   },
+*/
 
   locales: {
     // The key is the path for the locale to be nested under.
