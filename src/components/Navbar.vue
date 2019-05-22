@@ -32,6 +32,14 @@
             <v-list-tile-title class="white--text">{{link.text}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile router :to="doc_links[this.$lang].route">
+          <v-list-tile-action>
+            <v-icon class="white--text">{{doc_links[this.$lang].icon}}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title class="white--text">{{doc_links[this.$lang].text}}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
   </nav>
@@ -44,10 +52,12 @@ export default {
       drawer: false,
       links: [
         {icon: 'home', text: 'Home', route: '/'},
-        {icon: '', text: 'How To Use', route: '/docs'},
-        {icon: '', text: '使い方', route: '/docs/ja'},
-      ]
+      ],
+      doc_links: {
+        en: {icon: '', text: 'How To Use', route: '/docs'},
+        ja: {icon: '', text: '使い方', route: '/docs/ja'}
+      }
     }
-  }
+  },
 }
 </script>
