@@ -2,15 +2,23 @@ module.exports = {
   title: 'Pokéctiveness2',
   description: 'Pokémon move effectiveness chart.',
   dest: 'dist/docs',
-  base: '/docs/',
 //  dest: 'public/docs',
-//  base: '/public/docs/',
+  base: '/docs/',
 
   themeConfig: {
     sidebar: 'auto',
-    nav: [
-      { text: '戻る', link: '/' },
-    ]
+    locales: {
+      '/': {
+        nav: [
+          { text: 'back', link: 'https://pokectiveness2.netlify.com/'},
+        ]
+      },
+      '/ja/': {
+        nav: [
+          { text: '戻る', link: 'https://pokectiveness2.netlify.com/'},
+        ]
+      }  
+    }
   },
 
   locales: {
@@ -19,7 +27,7 @@ module.exports = {
     '/': {
       lang: 'english', // this will be set as the lang attribute on <html>
       title: 'Pokectiveness2',
-      description: 'Pokémon move effectiveness chart.'
+      description: 'Pokémon move effectiveness chart.',
     },
     '/ja/': {
       lang: '日本語',
