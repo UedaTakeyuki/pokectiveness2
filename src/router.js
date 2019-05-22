@@ -3,10 +3,12 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Types from './views/Types.vue'
 import Pokemon from './views/Pokemon.vue'
+import ga from 'vue-ga'
 //import pokedex from './pokedex'
 //import types from './typeeffectiveness'
 
-Vue.use(Router);
+//Vue.use(Router);
+ga(Vue.use(Router), 'UA-43410269-6')
 
 export default new Router({
   mode: 'history',
