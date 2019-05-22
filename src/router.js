@@ -7,10 +7,10 @@ import ga from 'vue-ga'
 //import pokedex from './pokedex'
 //import types from './typeeffectiveness'
 
-//Vue.use(Router);
-ga(Vue.use(Router), 'UA-43410269-6')
+Vue.use(Router);
 
-export default new Router({
+//export default new Router({
+const router =  new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -56,3 +56,8 @@ export default new Router({
 
   ]
 })
+
+ga(router, 'UA-43410269-6');
+
+export default router;
+
