@@ -4,6 +4,15 @@ module.exports = {
   dest: 'dist/docs',
 //  dest: 'public/docs',
   base: '/docs/',
+  plugins: [
+    [ 
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-43410269-6' // UA-00000000-0
+      }
+    ]  
+  ],
+
 
   themeConfig: {
     sidebar: 'auto',
