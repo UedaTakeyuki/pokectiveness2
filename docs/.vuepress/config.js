@@ -6,11 +6,12 @@ module.exports = {
 //  dest: 'public/docs',
 //  base: '/public/docs/',
 
-/*
   themeConfig: {
-    sidebar: 'auto'
+    sidebar: 'auto',
+    nav: [
+      { text: '戻る', link: '/' },
+    ]
   },
-*/
 
   locales: {
     // The key is the path for the locale to be nested under.
@@ -24,13 +25,6 @@ module.exports = {
       lang: '日本語',
       title: 'Pokectiveness2',
       description: 'ポケモンわざ相性図鑑',
-      themeConfig: {
-        sidebar: 'auto',
-
-        nav: [
-          { text: '戻る', link: '/' },
-        ]
-      },
     }
   }
 }
