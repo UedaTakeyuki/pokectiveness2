@@ -13,10 +13,8 @@ module.exports = {
     ]  
   ],
 
-
   themeConfig: {
     sidebar: 'auto',
-/*    
     locales: {
       '/': {
         nav: [
@@ -29,7 +27,6 @@ module.exports = {
         ]
       }  
     }
-*/
   },
 
   locales: {
