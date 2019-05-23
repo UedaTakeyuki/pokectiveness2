@@ -18,12 +18,12 @@ module.exports = {
     locales: {
       '/': {
         nav: [
-          { text: 'back', link: 'https://pokectiveness2.netlify.com/'},
+          { text: 'back to App', link: 'https://pokectiveness2.netlify.com/'},
         ]
       },
       '/ja/': {
         nav: [
-          { text: '戻る', link: 'https://pokectiveness2.netlify.com/'},
+          { text: 'アプリに戻る', link: 'https://pokectiveness2.netlify.com/'},
         ]
       }  
     }
@@ -34,12 +34,12 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'english', // this will be set as the lang attribute on <html>
-      title: 'Pokectiveness2',
+      title: 'Users Guide',
       description: 'Pokémon move effectiveness chart.',
     },
     '/ja/': {
       lang: '日本語',
-      title: 'Pokectiveness2',
+      title: 'ユーザー・ガイド',
       description: 'ポケモンわざ相性図鑑',
     }
   }
