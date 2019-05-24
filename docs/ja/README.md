@@ -68,3 +68,13 @@ Pokéctiveness2 はバトルを有利に進めるために相手の弱点を調�
 <div class="img-wrapper">
 	<img src="/docs/pics/2019-05-24 16.37.30.png" width="80%">  
 </div>
+
+## 謝辞
+Pokéctiveness2 は以下のサービス、オープンソースのライブラリやリソースを使わせていただいております。ここに感謝の意を捧げつつ、ご紹介させていただきます次第です
+
+- [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
+- [Pokemon.json](https://github.com/fanzeyi/pokemon.json)
+- [Vue](https://github.com/vuejs/vue)
+- [Vuetify](https://github.com/vuetifyjs/vuetify)
+- [VuePress](https://github.com/vuejs/vuepress)
+- [Netlify](https://www.netlify.com/)
