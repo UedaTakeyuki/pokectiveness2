@@ -56,18 +56,26 @@ Pokéctiveness2 はバトルを有利に進めるために相手の弱点を調�
 
 
 ## サイドメニュー
-### ホームに戻る
-### ドキュメントを開く
+アプリケーションの左上にある三本線の表示はその形から「ハンバーガーメニュー」と呼ばれるメニューで、タッチすると普段は隠れている「サイドメニュー」を表示します
+<div class="img-wrapper">
+	<img src="/docs/pics/humbergermenu.png" width="75%">  
+</div>
+
+サイドメニューには以下の項目があります
+- QRコード: Pokéctiveness2 のQR コードです
+- HOME: Pokéctiveness2 を最初の画面に戻します
+- 使い方: このドキュメントを表示します
+
+<div class="img-wrapper">
+	<img src="/docs/pics/2019-05-24 16.37.30.png" width="80%">  
+</div>
+
 
 ## このアプリをホーム画面に登録する
-
 ### iOS の場合
 ### Androdi の場合
 
 ## このアプリを友達に教えてあげる
-<div class="img-wrapper">
-	<img src="/docs/pics/2019-05-24 16.37.30.png" width="80%">  
-</div>
 
 ## 謝辞
 Pokéctiveness2 は以下のサービス、オープンソースのライブラリやリソースを使わせていただいております。ここに感謝の意を捧げつつ、ご紹介させていただきます次第です
