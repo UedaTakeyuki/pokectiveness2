@@ -17,3 +17,4 @@
 2019.05.01 add QR link to nav-link
 
 2019.05.22 document, google analytics
+2019.05.25 japanese user guide
