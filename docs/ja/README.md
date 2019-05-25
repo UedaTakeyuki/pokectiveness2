@@ -6,10 +6,12 @@
 		filter: drop-shadow(10px 10px 5px silver);
 	}
 </style>
-Pokéctiveness2 はバトルを有利に進めるために相手の弱点を調べる Web アプリケーションです。インストールなしにスマホで使うことことができる上、[ホーム画面に登録](#このアプリをホーム画面に登録する)すれば、普通のアプリケーションのようにワンクリックで起動して使うことができます
+Pokéctiveness2 はバトルを有利に進めるために相手の弱点を調べる Web アプリケーションです。相手の弱点や[二重弱点](#二重弱点)を見つけてバトルを有利に進めることができます
+
+インストールなしにスマホで使うことことができる上、[ホーム画面に登録](#このアプリをスマホのホーム画面に登録する)すれば、普通のアプリケーションのようにワンクリックで起動して使うことができます
 
 ## ポケモンの弱点を調べる
-弱点は相手の**名前**か**種族**で調べることができます
+弱点は相手の[名前](#名前で調べる)か[種族](#種族で調べる)で調べることができます
 <div class="img-wrapper">
 	<img src="/docs/pics/2019-05-24 16.10.09.png" width="80%">  
 </div>
@@ -58,7 +60,7 @@ Pokéctiveness2 はバトルを有利に進めるために相手の弱点を調�
 ## サイドメニュー
 アプリケーションの左上にある三本線の表示はその形から「ハンバーガーメニュー」と呼ばれるメニューで、タッチすると普段は隠れている「サイドメニュー」を表示します
 <div class="img-wrapper">
-	<img src="/docs/pics/humbergermenu.png" width="75%">  
+	<img src="/docs/pics/humberger2.png" width="75%">  
 </div>
 
 サイドメニューには以下の項目があります
@@ -70,15 +72,49 @@ Pokéctiveness2 はバトルを有利に進めるために相手の弱点を調�
 	<img src="/docs/pics/2019-05-24 16.37.30.png" width="80%">  
 </div>
 
+## このアプリをスマホのホーム画面に登録する
+Pokéctiveness2 のアイコンをスマホの**ホーム画面**に追加しておくと、普通のアプリケーションのようにワンクリックで起動して使うことができます
 
-## このアプリをホーム画面に登録する
 ### iOS の場合
+画面下のメニューから、**四角形から上矢印が出ているアイコン**をタップします
+<div class="img-wrapper">
+	<img src="/docs/pics/share2.png" width="80%">  
+</div>
+現れたダイアログの下段から**ホーム画面に追加**アイコンをタップします
+<div class="img-wrapper">
+	<img src="/docs/pics/addhome.png" width="80%">  
+</div>
+画面右上の**追加**をタップします
+<div class="img-wrapper">
+	<img src="/docs/pics/add.png" width="80%">  
+</div>
+Pokéctiveness2 アイコンがホーム画面に追加されます
+<div class="img-wrapper">
+	<img src="/docs/pics/home.png" width="80%">  
+</div>
+
 ### Androdi の場合
 
 ## このアプリを友達に教えてあげる
+Pokéctiveness2 を友達に教えてあげる方法は２つあります
+
+### 1. URL をシェアする
+Pokéctiveness2 の URL はこちらです
+**https://pokectiveness2.netlify.com**
+
+### 2. QR コードをその場で見せてあげる
+ハンバーガーメニューをタップすると、サイドメニューの上部に Pokéctiveness2 の QR コードを画面に表示して、友達の QR コードリーダーで読み取ってもらう事ができます
+<div class="img-wrapper">
+	<img src="/docs/pics/humberger2.png" width="80%">  
+</div>
+<div class="img-wrapper">
+	<img src="/docs/pics/2019-05-24 16.37.30.png" width="80%">  
+</div>
+
+
 
 ## 謝辞
-Pokéctiveness2 は以下のサービス、オープンソースのライブラリやリソースを使わせていただいております。ここに感謝の意を捧げつつ、ご紹介させていただきます次第です
+Pokéctiveness2 は以下のサービス、オープンソースのライブラリやリソースを使わせていただいております。ここに感謝の意を捧げつつ、ご紹介させていただきます
 
 - [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
 - [Pokemon.json](https://github.com/fanzeyi/pokemon.json)
