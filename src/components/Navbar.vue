@@ -15,7 +15,7 @@
       <v-list>
         <v-layout column align-center class="white--text">
           <v-flex>
-            <v-avatar size="100">
+            <v-avatar tile="true" size="100">
               <v-img 
                 :src="require('@/assets/qr.png/')"
               >
