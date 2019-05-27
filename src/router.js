@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Types from './views/Types.vue'
 import Pokemon from './views/Pokemon.vue'
+import Pokemon_alola from './views/Pokemon_alola.vue'
 import ga from 'vue-ga'
 //import pokedex from './pokedex'
 //import types from './typeeffectiveness'
@@ -30,6 +31,12 @@ const router =  new Router({
       path: '/pokemon/:id',
       name: 'pokemon',
       component: Pokemon,
+      props: {}
+    },
+    {
+      path: '/pokemon_alola/:id',
+      name: 'pokemon_alola',
+      component: Pokemon_alola,
       props: {}
     },
     {
