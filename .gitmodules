@@ -1,3 +1,6 @@
 [submodule "src/assets/ProfesseurOak"]
 	path = src/assets/ProfesseurOak
 	url = https://github.com/Incien104/ProfesseurOak.git
+[submodule "src/assets/pokemon.json"]
+	path = src/assets/pokemon.json
+	url = https://github.com/fanzeyi/pokemon.json.git
