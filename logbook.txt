@@ -19,3 +19,4 @@
 2019.05.22 document, google analytics
 2019.05.25 japanese user guide
 2019.05.27 alolan form
+2019.05.28 add alolan to type

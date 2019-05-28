@@ -49,6 +49,7 @@
           <div >この種族のポケモン</div>
         </template>
         <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
+        <NameButton_alola v-for="poke_id in pokemons_alola.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -57,19 +58,22 @@
 
 <script>
 import pokemons from '../pokedex';
+import pokemons_alola from '../alola';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import NameButton from '@/components/NameButton'
+import NameButton_alola from '@/components/NameButton_alola';
 
 //module.exports = {
 export default {
   props: [],
-  components: {TypeButton, NameButton},
+  components: {TypeButton, NameButton, NameButton_alola},
   data: function () {
     return {
       s_lang: "ja",
       l_lang: "japanese",
       pokemons: pokemons,
+      pokemons_alola: pokemons_alola,
       types: types,
     }
   },
