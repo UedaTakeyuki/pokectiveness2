@@ -6,14 +6,19 @@ import router from './router'
 
 Vue.config.productionTip = false;
 Vue.prototype.$lang = (function(){
-  switch(navigator.language.toLowerCase()){
-    case "ja-jp":
-    case "ja":
+  const browser_lang = navigator.language.toLowerCase();
+  switch(true){
+//    case "ja-jp":
+//    case "ja":
+    case /ja.*/.test(browser_lang):
       return "ja";
-      break;
+    case /zh.*/.test(browser_lang):
+      return "zh";
+//      break;
+//    case "zh-CN"
     default:
       return "en";
-      break;
+//      break;
   }
 })();
 
