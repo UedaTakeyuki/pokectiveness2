@@ -37,7 +37,7 @@
 import pokemons from '../alola';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton';
-import common from '../common';
+import common from '../common'; // common routines
 
 //module.exports = {
 export default {

@@ -7,9 +7,9 @@
       >
       </v-img>
       <div>No. {{$route.params.id}}</div>
-      <div>日本名：{{pokemons[$route.params.id - 1].name["japanese"]}}</div>
-      <div>英語名：{{pokemons[$route.params.id - 1].name["english"]}}</div>
-      <div>中国名：{{pokemons[$route.params.id - 1].name["chinese"]}}</div>
+      <div>和名：{{pokemons[$route.params.id - 1].name["japanese"]}}</div>
+      <div>English：{{pokemons[$route.params.id - 1].name["english"]}}</div>
+      <div>中文：{{pokemons[$route.params.id - 1].name["chinese"]}}</div>
       種族：
       <TypeButton v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id" :type_id="type_id" :lang="s_lang" />
       <div v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id">
@@ -25,6 +25,7 @@
 import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
+import common from '../common'; // common routines
 
 //module.exports = {
 export default {
@@ -32,13 +33,17 @@ export default {
   components: {TypeButton},
   data: function () {
     return {
-      s_lang: "ja",
-      l_lang: "japanese",
+//     s_lang: "ja",
+//      l_lang: "japanese",
       pokemons: pokemons,
       types: types
     }
   },
   methods: {
   },
+  computed: {
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
+  }
 }
 </script>

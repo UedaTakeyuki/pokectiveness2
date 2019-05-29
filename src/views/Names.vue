@@ -19,6 +19,7 @@ import pokemons_alola from '../alola';
 //let pokemons = require('../pokedex');
 import NameButton from '@/components/NameButton';
 import NameButton_alola from '@/components/NameButton_alola';
+import common from '../common'; // common routines
 
 // module.exports = { // TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
 export default {
@@ -49,14 +50,7 @@ export default {
     },
   },
   computed: {
-    l_lang: function(){
-      switch(this.$lang){
-        case "ja":
-          return "japanese";
-        default:
-          return "english";
-      }
-    }
+    l_lang: common.l_lang,
   }
 }
 </script>

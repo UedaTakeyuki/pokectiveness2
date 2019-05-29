@@ -63,6 +63,7 @@ import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import NameButton from '@/components/NameButton'
 import NameButton_alola from '@/components/NameButton_alola';
+import common from '../common'; // common routines
 
 //module.exports = {
 export default {
@@ -70,8 +71,8 @@ export default {
   components: {TypeButton, NameButton, NameButton_alola},
   data: function () {
     return {
-      s_lang: "ja",
-      l_lang: "japanese",
+//      s_lang: "ja",
+//      l_lang: "japanese",
       pokemons: pokemons,
       pokemons_alola: pokemons_alola,
       types: types,
@@ -79,6 +80,9 @@ export default {
   },
   methods: {
   },
-
+  computed: {
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
+  }
 }
 </script>

@@ -34,6 +34,7 @@
 <script>
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
+import common from '../common'; // common routines
 
 //module.exports = {
 export default {
@@ -41,8 +42,8 @@ export default {
   components: {TypeButton},
   data: function () {
     return {
-      s_lang: "ja",
-      l_lang: "japanese",
+//      s_lang: "ja",
+//      l_lang: "japanese",
       types: types,
       first_letters: {
 /*
@@ -93,6 +94,11 @@ export default {
       return "/types/" + id;
     }
   },
+    computed: {
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
+  }
+
 }
 
 </script>
