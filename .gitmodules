@@ -4,6 +4,6 @@
 [submodule "src/assets/pokemon.json"]
 	path = src/assets/pokemon.json
 	url = https://github.com/fanzeyi/pokemon.json.git
-[submodule "src/assets/pokemon.json"]
+[submodule "src/assets/pokepinyin.json"]
 	path = src/assets/pokepinyin.json
-	url = https://github.com/UedaTakeyuki/pokepinyin.json.git
+	url = https://github.com/UedaTakeyuki/pokepinyin.git
