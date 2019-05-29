@@ -9,13 +9,13 @@
       >
       </v-img>
       <div>No. {{$route.params.id}}</div>
-      <div>日本名：{{pokemons.filter(function(element, index, array){
+      <div>和名：{{pokemons.filter(function(element, index, array){
         return (element.id == $route.params.id);
       })[0].name["japanese"]}} アローラのすがた</div>
-      <div>英語名：{{pokemons.filter(function(element, index, array){
+      <div>English：{{pokemons.filter(function(element, index, array){
         return (element.id == $route.params.id);
       })[0].name["english"]}} alolan</div>
-      <div>中国名：{{pokemons.filter(function(element, index, array){
+      <div>中文：{{pokemons.filter(function(element, index, array){
         return (element.id == $route.params.id);
       })[0].name["chinese"]}} 阿羅拉的樣子</div>
       種族：
@@ -36,7 +36,8 @@
 <script>
 import pokemons from '../alola';
 import types from '../typeeffectiveness';
-import TypeButton from '@/components/TypeButton'
+import TypeButton from '@/components/TypeButton';
+import common from '../common';
 
 //module.exports = {
 export default {
@@ -45,12 +46,15 @@ export default {
   data: function () {
     return {
       s_lang: "ja",
-      l_lang: "japanese",
+//      l_lang: "japanese",
       pokemons: pokemons,
       types: types
     }
   },
   methods: {
   },
+  computed: {
+    l_lang: common.l_lang,
+  }
 }
 </script>
