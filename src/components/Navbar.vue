@@ -7,7 +7,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn flat class="grey--text" v-if="$route.name != 'home'" @click="$router.back()">
-        <v-icon>arrow_back</v-icon><span>戻る</span>
+        <v-icon>arrow_back</v-icon><span>{{wordings.navbar.back[s_lang]}}</span>
       </v-btn>
     </v-toolbar>
 
@@ -22,7 +22,7 @@
               </v-img>
             </v-avatar>
           </v-flex>
-          このアプリの QRコード
+          {{wordings.navbar.qr[s_lang]}}
         </v-layout>
         <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
           <v-list-tile-action>
@@ -46,9 +46,13 @@
 </template>
 
 <script>
+import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
+
 export default {
   data(){
     return {
+      wordings: wordings,
       drawer: false,
       links: [
         {icon: 'home', text: 'Home', route: '/'},
@@ -59,5 +63,9 @@ export default {
       }
     }
   },
+  computed: {
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
+  }
 }
 </script>

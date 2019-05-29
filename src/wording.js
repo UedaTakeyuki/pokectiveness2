@@ -30,6 +30,16 @@ export default {
       ja: " アローラのすがた",
       en: " alolan"
     }
+  },
+  navbar: {
+    back: {
+      ja: "戻る",
+      en: "Back"
+    },
+    qr: {
+      ja: "このアプリの QRコード",
+      en: "QR code for this app."
+    }
   }
 
 }
