@@ -20,3 +20,5 @@
 2019.05.25 japanese user guide
 2019.05.27 alolan form
 2019.05.28 add alolan to type
+
+2019.05.29 English version complete
