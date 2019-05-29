@@ -4,11 +4,13 @@
                 :key="poke_id" 
                 :poke_id="poke_id" 
                 :lang="l_lang"
+                :alola="false"
     />
-    <NameButton_alola v-for="poke_id in pokemon_alola_whose_name_start_with($route.params.id).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})"
+    <NameButton v-for="poke_id in pokemon_alola_whose_name_start_with($route.params.id).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})"
                 :key="poke_id" 
                 :poke_id="poke_id" 
                 :lang="l_lang"
+                :alola="true"
     />
   </div>
 </template>
@@ -18,13 +20,14 @@ import pokemons from '../pokedex';
 import pokemons_alola from '../alola';
 //let pokemons = require('../pokedex');
 import NameButton from '@/components/NameButton';
-import NameButton_alola from '@/components/NameButton_alola';
+//import NameButton_alola from '@/components/NameButton_alola';
 import common from '../common'; // common routines
 
 // module.exports = { // TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
 export default {
   props: [],
-  components: {NameButton, NameButton_alola},
+//  components: {NameButton, NameButton_alola},
+  components: {NameButton},
   data: function () {
     return {
       pokemons: pokemons,

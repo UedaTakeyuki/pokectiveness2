@@ -69,7 +69,8 @@ export default {
     },
     type_list: function(poke_id){
       if (this.alola){
-        return pokemons_alolan.filter(function(element, index, array){return (element.id == poke_id);})[0].type;
+//        return pokemons_alolan.filter(function(element, index, array){return (element.id == poke_id);})[0].type;
+        return pokemons_alolan.filter(function(element){return (element.id == poke_id);})[0].type;
       } else {
         return pokemons[poke_id - 1].type;
       }

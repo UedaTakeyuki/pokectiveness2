@@ -48,8 +48,8 @@
         <template v-slot:header>
           <div >{{wordings.types.thistypes[s_lang]}}</div>
         </template>
-        <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
-        <NameButton_alola v-for="poke_id in pokemons_alola.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
+        <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="false"/>
+        <NameButton v-for="poke_id in pokemons_alola.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="true"/>
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -62,14 +62,15 @@ import pokemons_alola from '../alola';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import NameButton from '@/components/NameButton'
-import NameButton_alola from '@/components/NameButton_alola';
+//import NameButton_alola from '@/components/NameButton_alola';
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
 
 //module.exports = {
 export default {
   props: [],
-  components: {TypeButton, NameButton, NameButton_alola},
+//  components: {TypeButton, NameButton, NameButton_alola},
+  components: {TypeButton, NameButton},
   data: function () {
     return {
 //      s_lang: "ja",
