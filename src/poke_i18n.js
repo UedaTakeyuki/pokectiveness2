@@ -5,10 +5,9 @@ export default
     cn: "阿羅拉",
     de: "Alola",
     en: "Alola Form",
-    es:
-    fr: 
-    es:
-    it:　"Forma di Alola",
+    es: "",
+    fr: "",
+    it: "Forma di Alola",
 
 
   },
