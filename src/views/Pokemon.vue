@@ -13,7 +13,8 @@
       種族：
       <TypeButton v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id" :type_id="type_id" :lang="s_lang" />
       <div v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id">
-        {{types.typename[s_lang][type_id]}}の弱点：
+        {{weekpoint(type_id)}}
+<!--        {{types.typename[s_lang][type_id]}}の弱点： -->
         <TypeButton v-for="t in types.suppereffective[type_id]" :key="t" :type_id="t" :lang="s_lang"/>
       </div>
     </v-card>
@@ -40,6 +41,14 @@ export default {
     }
   },
   methods: {
+    weekpoint: function(type_id){
+      switch (this.s_lang){
+        case "ja":
+          return `${this.types.typename[this.s_lang][type_id]}の弱点：`;
+        default:
+          return `Weekpoint from ${this.types.typename[this.s_lang][type_id]}：`;
+      }
+    }
   },
   computed: {
     l_lang: common.l_lang,

@@ -6,7 +6,7 @@
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
         <template v-slot:header>
-          <div>名前</div>
+          <div>{{wordings.home.name[s_lang]}}</div>
         </template>
         <router-link 
           v-for="letter in first_letters[this.$lang]"
@@ -22,7 +22,7 @@
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
         <template v-slot:header>
-          <div>種族</div>
+          <div>{{wordings.home.type[s_lang]}}</div>
         </template>
         <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-expansion-panel-content>
@@ -35,6 +35,7 @@
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
 
 //module.exports = {
 export default {
@@ -44,6 +45,7 @@ export default {
     return {
 //      s_lang: "ja",
 //      l_lang: "japanese",
+      wordings: wordings,
       types: types,
       first_letters: {
 /*

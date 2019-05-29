@@ -6,7 +6,7 @@
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
         <template v-slot:header>
-          <div>種族一覧</div>
+          <div>{{wordings.types.types[s_lang]}}</div>
         </template>
         <TypeButton 
           v-for="id in types.ids"
@@ -46,7 +46,7 @@
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
         <template v-slot:header>
-          <div >この種族のポケモン</div>
+          <div >{{wordings.types.thistypes[s_lang]}}</div>
         </template>
         <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
         <NameButton_alola v-for="poke_id in pokemons_alola.filter(member => member.type.includes($route.params.id)).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang"/>
@@ -64,6 +64,7 @@ import TypeButton from '@/components/TypeButton'
 import NameButton from '@/components/NameButton'
 import NameButton_alola from '@/components/NameButton_alola';
 import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
 
 //module.exports = {
 export default {
@@ -73,6 +74,7 @@ export default {
     return {
 //      s_lang: "ja",
 //      l_lang: "japanese",
+      wordings: wordings,
       pokemons: pokemons,
       pokemons_alola: pokemons_alola,
       types: types,
