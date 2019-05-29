@@ -13,7 +13,7 @@
       <div>和名：{{pokemons[$route.params.id - 1].name["japanese"]}}{{alola ? ' アローラのすがた' : ''}}</div>
       <div>English：{{pokemons[$route.params.id - 1].name["english"]}}{{alola ? ' alolan' : ''}}</div>
       <div>中文：{{pokemons[$route.params.id - 1].name["chinese"]}}{{alola ? ' 阿羅拉的樣子' : ''}}</div>
-      種族：
+      {{wordings.pokemon.type[s_lang]}}：
 <!--      <TypeButton v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id" :type_id="type_id" :lang="s_lang" />
       <div v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id">
         {{weekpoint_str(type_id)}}
@@ -35,6 +35,7 @@ import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
 
 //module.exports = {
 export default {
@@ -44,6 +45,7 @@ export default {
     return {
 //     s_lang: "ja",
 //      l_lang: "japanese",
+      wordings: wordings,
       pokemons: pokemons,
       pokemons_alolan: pokemons_alolan,
       types: types
