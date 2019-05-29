@@ -18,5 +18,18 @@ export default {
       ja: "この種族のポケモン",
       en: "This types"
     }
+  },
+  pokemon: {
+    type: {
+      ja: "種族",
+      en: "Type"
+    }
+  },
+  alola_general: {
+    alolan_form_str: {
+      ja: " アローラのすがた",
+      en: " alolan"
+    }
   }
+
 }

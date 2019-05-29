@@ -2,7 +2,7 @@
   <router-link v-bind:to="path_to_pokemon_with_id(poke_id)">
     <v-btn small>{{pokemons.filter(function(element, index, array){
       return (element.id == poke_id);
-      })[0].name[lang]}} アローラのすがた</v-btn>
+      })[0].name[lang]}}{{wordings.alola_general.alolan_form_str[s_lang]}}</v-btn>
   </router-link>
 </template>
 
@@ -18,11 +18,14 @@
 <script>
 import pokemons from '../alola';
 import types from '@/typeeffectiveness';
+import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
 
 export default {
   props: ['poke_id','lang'],
   data: function () {
     return {
+      wordings: wordings,
       pokemons: pokemons,
       types:types,
     }
@@ -32,6 +35,10 @@ export default {
 //      return "/pokemon/" + this.props.poke.filter(member => member.name[this.l_lang] == nm)[0].id;
       return "/pokemon_alola/" + id;
     },
+  },
+    computed: {
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
   }
 }
 </script>
