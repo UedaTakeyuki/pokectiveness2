@@ -22,3 +22,4 @@
 2019.05.28 add alolan to type
 
 2019.05.29 English version complete
+2019.05.30 add link to atelier ueda on footer
