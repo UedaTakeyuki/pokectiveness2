@@ -94,6 +94,22 @@ Pokéctiveness2 アイコンがホーム画面に追加されます
 </div>
 
 ### Androdi の場合
+端末のメニューキー、または画面右上のメニューボタン（縦の３つの点）をタップします
+<div class="img-wrapper">
+	<img src="/docs/pics/android_menubutton.png" width="80%">  
+</div>
+現れたメニューから**ホーム画面に追加**をタップします
+<div class="img-wrapper">
+	<img src="/docs/pics/android_menu.png" width="80%">  
+</div>
+ダイアログ右下の**追加**をタップします
+<div class="img-wrapper">
+	<img src="/docs/pics/android_add.png" width="80%">  
+</div>
+Pokéctiveness2 アイコンがホーム画面に追加されます
+<div class="img-wrapper">
+	<img src="/docs/pics/android_screen.png" width="80%">  
+</div>
 
 ## このアプリを友達に教えてあげる
 Pokéctiveness2 を友達に教えてあげる方法は２つあります
