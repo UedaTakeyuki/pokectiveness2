@@ -1,4 +1,4 @@
-# ユーザー・ガイド
+# 使い方
 <style>
 	.img-wrapper {
 		text-align:center;
