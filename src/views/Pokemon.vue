@@ -52,6 +52,7 @@ export default {
     }
   },
   methods: {
+    getPokedexItemById: common.getPokedexItemById,
     weekpoint_str: function(type_id){
       switch (this.s_lang){
         case "ja":
@@ -62,9 +63,15 @@ export default {
     },
     image_path: function(poke_id){
       if (this.alola) {
-        return 'assets/ProfesseurOak/img/alola/'+poke_id+'.png';
+//        return 'assets/ProfesseurOak/img/alola/'+poke_id+'.png';
+        return 'assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'-alola.gif';
       } else {
-        return 'assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
+        if (poke_id <= 721 || poke_id >= 808){
+          return 'assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
+        } else {
+          return 'assets/pokemon.json/images/'+('000' + poke_id ).slice( -3 )
+                  +this.getPokedexItemById(this.pokemons, poke_id).name.english+'.png';
+        }
       } 
     },
     type_list: function(poke_id){
