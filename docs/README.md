@@ -128,6 +128,9 @@ By tapping the hamburger menu, you can display the QR code of Pokéctiveness2 on
   <img src = "/docs/pics/2019-05-24 16.37.30.png" width = "80%">
 </div>
 
+## Forum
+Forum is available at [hire](http://www.uedasoft.com/forums/forum/pokectiveness2/)  
+[Q&A](), [Issue Report](), and [Feature Request]() are prepared, and please make new topic as you like.
 
 
 ## Acknowledgments

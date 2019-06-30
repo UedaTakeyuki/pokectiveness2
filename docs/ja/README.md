@@ -127,7 +127,9 @@ Pokéctiveness2 の URL はこちらです
 	<img src="/docs/pics/2019-05-24 16.37.30.png" width="80%">  
 </div>
 
-
+## フォーラム
+Pokéctiveness2 のフォーラムを [こちら](https://uedasoft.com/ja/forum/pokectiveness2/light.cgi) にご用意いたしました  
+Pokéctiveness2 に関するご質問、ご要望などご自由にご利用ください
 
 ## 謝辞
 Pokéctiveness2 は以下のサービス、オープンソースのライブラリやリソースを使わせていただいております。ここに感謝の意を捧げつつ、ご紹介させていただきます

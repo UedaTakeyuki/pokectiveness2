@@ -23,3 +23,5 @@
 
 2019.05.29 English version complete
 2019.05.30 add link to atelier ueda on footer
+
+2019.06.30 add "forum" on the document
