@@ -33,7 +33,7 @@ You will see the Pokemon's race and the type of move that will be the weakness o
 If you touch the displayed race or move , [More information](#find-by-race) will be displayed.
 
 ### Double weakness
-Pokemon with two type of race ​may have a move type that is a weakness from both race. This type of move is called **double weakness**. For example, in the case of Garados, the **electric** move contained in both the WATER and FLYING, so the electric move is a double weakness
+Pokemon who has two type of race may have a move type of common weakness against both race. This type of move is called **double weakness**. For example, in the case of Garados, the **electric** move contained in both the WATER and FLYING, so the electric move is a double weakness
 <div class = "img-wrapper">
   <img src = "/docs/pics/2019-05-30 20.45.47.png" width = "80%">
 </div>
