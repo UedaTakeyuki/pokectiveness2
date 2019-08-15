@@ -1,7 +1,15 @@
 # pokectiveness2
 ## Download
 ```
-git clone 
+git clone https://github.com/UedaTakeyuki/pokectiveness2.git
+cd pokectiveness2
+```
+
+## Setup submodules
+refer https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
+```
+git submodule init 
+git submodule update
 ```
 
 ## Project setup
