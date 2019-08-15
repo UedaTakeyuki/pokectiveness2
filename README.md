@@ -1,4 +1,8 @@
 # pokectiveness2
+## Download
+```
+git clone 
+```
 
 ## Project setup
 ```
