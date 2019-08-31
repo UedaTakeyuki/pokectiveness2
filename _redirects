@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://pokectiveness2.netlify.com/* https://pokectiveness2.uedasoft.com/:splat 301!
