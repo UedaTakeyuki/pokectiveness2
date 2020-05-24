@@ -48,8 +48,9 @@
         <template v-slot:header>
           <div >{{wordings.types.thistypes[s_lang]}}</div>
         </template>
-        <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="false"/>
-        <NameButton v-for="poke_id in pokemons_alola.filter(member => member.type.includes($route.params.id)).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="true"/>
+        <NameButton v-for="poke_id in pokemons.concat(pokemons_alola).filter(member => member.type.includes($route.params.id)).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="false"/>
+<!--        <NameButton v-for="poke_id in pokemons.filter(member => member.type.includes($route.params.id)).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="false"/>
+        <NameButton v-for="poke_id in pokemons_alola.filter(member => member.type.includes($route.params.id)).sort(function(a,b){return (a.name[l_lang] >= b.name[l_lang] ? 1: -1);}).map(function(element){return element.id;})" :key="poke_id" :poke_id="poke_id" :lang="l_lang" :alola="true"/> -->
       </v-expansion-panel-content>
     </v-expansion-panel>
 
