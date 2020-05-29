@@ -58,7 +58,7 @@ export default {
         case "ja":
           return `${this.types.typename[this.s_lang][type_id]}の弱点：`;
         default:
-          return `Weekpoint from ${this.types.typename[this.s_lang][type_id]}：`;
+          return `Weakness of ${this.types.typename[this.s_lang][type_id]}：`;
       }
     },
     image_path: function(poke_id){

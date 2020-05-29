@@ -25,3 +25,5 @@
 2019.05.30 add link to atelier ueda on footer
 
 2019.06.30 add "forum" on the document
+
+2020.05.29 wording: week point -> weakness
