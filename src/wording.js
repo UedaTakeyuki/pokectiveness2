@@ -19,6 +19,12 @@ export default {
       en: "This types"
     }
   },
+  settings: {
+    lang: {
+      ja: "言語",
+      en: "Language"
+    },
+  },
   pokemon: {
     type: {
       ja: "種族",

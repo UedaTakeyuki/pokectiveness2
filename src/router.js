@@ -54,6 +54,13 @@ const router =  new Router({
       props: {}
 //      props: {poke: name_a}
     },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: () => import(/* webpackChunkName: "about" */ './views/Settings.vue'),
+      props: {}
+//      props: {poke: name_a}
+    },
 // refer https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-external-website
     {
       path: '/docs',

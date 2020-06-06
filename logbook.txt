@@ -27,3 +27,5 @@
 2019.06.30 add "forum" on the document
 
 2020.05.29 wording: week point -> weakness
+
+2020.06.06 add global setting view and lang settings.

@@ -96,7 +96,7 @@ export default {
       return "/types/" + id;
     }
   },
-    computed: {
+  computed: {
     l_lang: common.l_lang,
     s_lang: common.s_lang,
   }

@@ -5,7 +5,8 @@ import router from './router'
 
 
 Vue.config.productionTip = false;
-Vue.prototype.$lang = (function(){
+//Vue.prototype.$lang = (function(){
+const get_browser_lang = () => {
   const browser_lang = navigator.language.toLowerCase();
   switch(true){
 //    case "ja-jp":
@@ -20,7 +21,22 @@ Vue.prototype.$lang = (function(){
       return "en";
 //      break;
   }
-})();
+};
+//})();
+
+// https://stackoverflow.com/questions/49256765/change-vue-prototype-variable-in-all-components
+let globalData = new Vue({
+  data: { $lang: get_browser_lang()}
+});
+Vue.mixin({
+  computed: {
+    $lang: {
+      get: function () { return globalData.$data.$lang },
+      set: function (newLang) { globalData.$data.$lang = newLang; }
+    }
+  }
+})
+//Vue.prototype.$lang = globalData.$lang;
 
 new Vue({
   router,
