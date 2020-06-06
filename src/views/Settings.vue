@@ -19,25 +19,50 @@ export default {
     return {
       wordings: wordings,
       langs: ['English','日本語'],
-      lang:this.$lang,
+      lang: "",
+//      lang: this.lang_setting2selectmenu(this.$lang),
+//      ↑ dont workd, this.$lang is not ready before created.
     }
   },
-  watch: {
-    // no-unused-vars
-    lang: function (newlang, oldlang) {
-      console.log(newlang)
-      switch (newlang){
-        case 'English':
-          console.log("en")
-          this.$lang='en';
+  methods: {
+    lang_setting2selectmenu: (lang) =>{
+      let result = "あほー";
+      switch (lang){
+        case 'en':
+          result = 'English';
           break;
-        case '日本語':
-          console.log("ja")
-          this.$lang='ja';
+        case 'ja':
+          result = '日本語'
           break;
         default:
           break;
       }
+      console.log(lang)
+      console.log(result)
+      return result;
+    },
+    lang_selectmenu2setting: (lang) =>{
+      let result = "";
+      switch (lang){
+        case 'English':
+          result = 'en';
+          break;
+        case '日本語':
+          result = 'ja'
+          break;
+        default:
+          break;
+      }
+      return result;
+    }
+  },
+  created: function() {
+    this.lang = this.lang_setting2selectmenu(this.$lang)
+  },
+  watch: {
+    // eslint no-unused-vars
+    lang: function (newlang, oldlang) {
+      this.$lang=this.lang_selectmenu2setting(newlang);
     }
   },
   computed: {
