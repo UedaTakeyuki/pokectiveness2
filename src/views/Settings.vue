@@ -1,10 +1,12 @@
 <template>
   <div class="pokemon">
-    <v-select
-      v-model="lang"
-      :items="langs"
-      :label="wordings.settings.lang[s_lang]"
-    ></v-select>
+    <v-card>
+      <v-select
+        v-model="lang"
+        :items="langs"
+        :label="wordings.settings.lang[s_lang]"
+      ></v-select>
+    </v-card>
   </div>
 </template>
 
