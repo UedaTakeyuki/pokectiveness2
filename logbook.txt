@@ -30,4 +30,6 @@
 
 2020.06.06 add global setting view and lang settings.
 
-2020.07.16 add PWA manifest & images
+2020.07.16 add PWA manifest & images, refer
+  https://qiita.com/w2or3w/items/74a6e471501ee28ee9dd
+  https://qiita.com/tocomi/items/1d56b19fd6c3da7c0428
