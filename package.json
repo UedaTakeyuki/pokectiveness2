@@ -11,6 +11,8 @@
     "docs:eject": "vuepress eject docs"
   },
   "dependencies": {
+    "@vue/cli-plugin-pwa": "^4.4.6",
+    "register-service-worker": "^1.7.1",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuepress": "^1.0.0-alpha.48",
