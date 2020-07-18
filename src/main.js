@@ -7,19 +7,23 @@ import './registerServiceWorker';
 Vue.config.productionTip = false;
 //Vue.prototype.$lang = (function(){
 const get_browser_lang = () => {
-  const browser_lang = navigator.language.toLowerCase();
-  switch(true){
-//    case "ja-jp":
-//    case "ja":
-    case /ja.*/.test(browser_lang):
-      return "ja";
-    case /zh.*/.test(browser_lang):
-      return "zh";
-//      break;
-//    case "zh-CN"
-    default:
-      return "en";
-//      break;
+  if (localStorage.$lang){
+    return localStorage.$lang
+  } else {
+    const browser_lang = navigator.language.toLowerCase();
+    switch(true){
+  //    case "ja-jp":
+  //    case "ja":
+      case /ja.*/.test(browser_lang):
+        return "ja";
+      case /zh.*/.test(browser_lang):
+        return "zh";
+  //      break;
+  //    case "zh-CN"
+      default:
+        return "en";
+  //      break;
+    }
   }
 };
 //})();

@@ -64,7 +64,10 @@ export default {
   watch: {
     // eslint no-unused-vars
     lang: function (newlang, oldlang) {
-      this.$lang=this.lang_selectmenu2setting(newlang);
+    // set to global
+    this.$lang=this.lang_selectmenu2setting(newlang);
+    // set to localStrage
+    localStorage.$lang=this.$lang;
     }
   },
   computed: {
