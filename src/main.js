@@ -7,6 +7,7 @@ import './registerServiceWorker';
 Vue.config.productionTip = false;
 //Vue.prototype.$lang = (function(){
 const get_browser_lang = () => {
+  // refer https://stackoverrun.com/ja/q/4348592#16010881 for checking if exists
   if (localStorage.$lang){
     return localStorage.$lang
   } else {
