@@ -48,6 +48,14 @@
             <v-list-tile-title class="white--text">{{doc_links2[this.$lang].text}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile router :to="doc_links3[this.$lang].route">
+          <v-list-tile-action>
+            <v-icon class="white--text">{{doc_links3[this.$lang].icon}}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title class="white--text">{{doc_links3[this.$lang].text}}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
   </nav>
@@ -72,6 +80,10 @@ export default {
       doc_links2: {
         en: {icon: '', text: 'Settings', route: '/settings'},
         ja: {icon: '', text: '設定', route: '/settings'},
+      },
+      doc_links3: {
+        en: {icon: '', text: 'Memo', route: '/memo'},
+        ja: {icon: '', text: 'メモ', route: '/memo'},
       },
     }
   },

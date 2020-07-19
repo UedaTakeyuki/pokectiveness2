@@ -35,3 +35,4 @@
   https://employment.en-japan.com/engineerhub/entry/2019/10/24/103000
 2020.07.17 add Splash image
 2020.07.18 use local strage to remember settings
+2020.07.19 start to making Memo feature.
