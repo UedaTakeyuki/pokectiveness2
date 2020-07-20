@@ -85,7 +85,7 @@ export default {
           this.beforeRaidFinish = 0
           this.afterRaid = 0
         } else {
-          if (duration < 45*60*1000){
+          if (duration < 45*60){
             this.beforeRaidStart = 0
             this.beforeRaidFinish = 45*60 -duration
             this.afterRaid = 0
