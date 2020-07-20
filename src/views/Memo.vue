@@ -11,10 +11,15 @@
        <v-btn @click="setElapseOfFeed">今、実をあげた</v-btn>
     </v-card>
     <v-card>
-      <div v-if="beforeRaid">
+      <div v-if="beforeRaidStart">
         レイド開始まで
-        <p v-if="beforeRaidHours" class="d-inline">{{beforeRaidHours}}時間 </p>
-        <p v-if="beforeRaidMinutes" class="d-inline">{{beforeRaidMinutes}}分 </p>
+        <p v-if="beforeRaidStartHours" class="d-inline">{{beforeRaidStartHours}}時間 </p>
+        <p v-if="beforeRaidStartMinutes" class="d-inline">{{beforeRaidStartMinutes}}分 </p>
+      </div>
+      <div v-if="beforeRaidFinish">
+        レイド終了まで
+        <p v-if="beforeRaidFinishHours" class="d-inline">{{beforeRaidFinishHours}}時間 </p>
+        <p v-if="beforeRaidFinishMinutes" class="d-inline">{{beforeRaidFinishMinutes}}分 </p>
       </div>
       <div v-if="afterRaid">
         レイド終了から
@@ -42,7 +47,8 @@ export default {
       elapseOfFeed: 0,
       items: minutesRange,
       remainingMinutes: 0,
-      beforeRaid: 0,
+      beforeRaidStart: 0,
+      beforeRaidFinish: 0,
       afterRaid: 0,
       //
     }
@@ -69,17 +75,25 @@ export default {
     oneMinCrock: function(){
       let raidStartTime = parseInt(localStorage.raidStartTime)
       let now = new Date()
-      let dulation =  Math.round((now.getTime() - raidStartTime)/1000)
-      if (dulation >= 3600 * 24){
+      let duration =  Math.round((now.getTime() - raidStartTime)/1000)
+      if (duration >= 3600 * 24){
         // Not interested in yesterday
         localStrage.removeItem("raidStartTime")
       } else {
-        if (dulation < 0){
-          this.beforeRaid = -dulation
+        if (duration < 0){
+          this.beforeRaidStart  = -duration
+          this.beforeRaidFinish = 0
           this.afterRaid = 0
         } else {
-          this.beforeRaid = 0
-          this.afterRaid = dulation
+          if (duration < 45*60*1000){
+            this.beforeRaidStart = 0
+            this.beforeRaidFinish = 45*60 -duration
+            this.afterRaid = 0
+          } else {
+            this.beforeRaidStart = 0
+            this.beforeRaidFinish = 0
+            this.afterRaid = duration - 45*60
+          }
         }
         setTimeout(this.oneMinCrock, 60000)
       }
@@ -107,11 +121,17 @@ export default {
     elapseSeconds: function(){
       return Math.floor(this.elapseOfFeed % 60)
     },
-    beforeRaidHours: function(){
-      return Math.floor(this.beforeRaid / 3600)
+    beforeRaidStartHours: function(){
+      return Math.floor(this.beforeRaidStart / 3600)
     },
-    beforeRaidMinutes: function(){
-      return Math.floor((this.beforeRaid % 3600) /60)
+    beforeRaidStartMinutes: function(){
+      return Math.floor((this.beforeRaidStart % 3600) /60)
+    },
+    beforeRaidFinishHours: function(){
+      return Math.floor(this.beforeRaidFinish / 3600)
+    },
+    beforeRaidFinishMinutes: function(){
+      return Math.floor((this.beforeRaidFinish % 3600) /60)
     },
     afterRaidHours: function(){
       return Math.floor(this.afterRaid / 3600)
