@@ -3,9 +3,9 @@
     <v-card>
       <div v-if="elapseOfFeed">
         実をあげてから
-        <p v-if="elapsedHours" class="d-inline">{{elapsedHours(elapseOfFeed)}}時間 </p>
-        <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes(elapseOfFeed)}}分 </p>
-        <p v-if="elapseSeconds" class="d-inline">{{elapseSeconds(elapseOfFeed)}}秒 </p>
+        <p v-if="elapsedHours" class="d-inline">{{elapsedHours}}時間 </p>
+        <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes}}分 </p>
+        <p v-if="elapseSeconds" class="d-inline">{{elapseSeconds}}秒 </p>
         経過
       </div>
        <v-btn @click="setElapseOfFeed">今、実をあげた</v-btn>
@@ -13,13 +13,13 @@
     <v-card>
       <div v-if="beforeRaid">
         レイド開始まで
-        <p v-if="elapsedHours" class="d-inline">{{elapsedHours(beforeRaid)}}時間 </p>
-        <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes(beforeRaid)}}分 </p>
+        <p v-if="beforeRaidHours" class="d-inline">{{beforeRaidHours}}時間 </p>
+        <p v-if="beforeRaidMinutes" class="d-inline">{{beforeRaidMinutes}}分 </p>
       </div>
       <div v-if="afterRaid">
         レイド終了から
-        <p v-if="elapsedHours" class="d-inline">{{elapsedHours(afterRaid)}}時間 </p>
-        <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes(afterRaid)}}分 </p>
+        <p v-if="afterRaidHours" class="d-inline">{{afterRaidHours}}時間 </p>
+        <p v-if="afterRaidMinutes" class="d-inline">{{afterRaidMinutes}}分 </p>
       </div>
       <v-select
         v-model="remainingMinutes"
@@ -67,7 +67,7 @@ export default {
       }
     },
     oneMinCrock: function(){
-      let raidStartTime = parseInt(localStorage.elapseOfFeed)
+      let raidStartTime = parseInt(localStorage.raidStartTime)
       let now = new Date()
       let dulation =  Math.round((now.getTime() - raidStartTime)/1000)
       if (dulation >= 3600 * 24){
@@ -75,25 +75,15 @@ export default {
         localStrage.removeItem("raidStartTime")
       } else {
         if (dulation < 0){
-          this.beforeRaid = 0
-          this.afterRaid = dulation
-        } else {
           this.beforeRaid = -dulation
           this.afterRaid = 0
+        } else {
+          this.beforeRaid = 0
+          this.afterRaid = dulation
         }
-        setTimeout(this.oneSecCrock, 60000)
+        setTimeout(this.oneMinCrock, 60000)
       }
     },
-    elapsedHours(duration){
-      return Math.floor(this.elapseOfFeed / 3600)
-    },
-    elapsedMinutes(duration){
-      return Math.floor((this.elapseOfFeed % 3600) /60)
-    },
-    elapseSeconds(duration){
-      return Math.floor(this.elapseOfFeed % 60)
-    }
-
   },
   watch: {
     // eslint no-unused-vars
@@ -108,6 +98,27 @@ export default {
     }
   },
   computed: {
+    elapsedHours: function(){
+      return Math.floor(this.elapseOfFeed / 3600)
+    },
+    elapsedMinutes: function(){
+      return Math.floor((this.elapseOfFeed % 3600) /60)
+    },
+    elapseSeconds: function(){
+      return Math.floor(this.elapseOfFeed % 60)
+    },
+    beforeRaidHours: function(){
+      return Math.floor(this.beforeRaid / 3600)
+    },
+    beforeRaidMinutes: function(){
+      return Math.floor((this.beforeRaid % 3600) /60)
+    },
+    afterRaidHours: function(){
+      return Math.floor(this.afterRaid / 3600)
+    },
+    afterRaidMinutes: function(){
+      return Math.floor((this.afterRaid % 3600) /60)
+    },
   },
   mounted: function(){
     if (localStorage.elapseOfFeed) {
