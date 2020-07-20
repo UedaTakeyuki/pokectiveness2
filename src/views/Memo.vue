@@ -1,11 +1,16 @@
 <template>
   <div class="memo">
     <v-card>
-      <p>実をあげてから{{elapseOfFeed}}秒たった</p>
-      <v-btn @click="setElapseOfFeed">今、実をあげた</v-btn>
+      <div v-if="elapseOfFeed">
+        実をあげてから
+        <p v-if="elapsedHours" class="d-inline">{{elapsedHours}}時間 </p>
+        <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes}}分 </p>
+        <p v-if="elapseSeconds" class="d-inline">{{elapseSeconds}}秒 </p>
+        経過
+      </div>
+       <v-btn @click="setElapseOfFeed">今、実をあげた</v-btn>
     </v-card>
     <v-card>
-      <p>実をあげてから{{elapseOfFeed}}分たった</p>
       <v-select
         v-model="remainingMinutes"
         :items="items"
@@ -48,6 +53,18 @@ export default {
         setTimeout(this.oneSecCrock, 1000)
       }
     }
+  },
+  computed: {
+    elapsedHours(){
+      return Math.floor(this.elapseOfFeed / 3600)
+    },
+    elapsedMinutes(){
+      return Math.floor((this.elapseOfFeed % 3600) /60)
+    },
+    elapseSeconds(){
+      return Math.floor(this.elapseOfFeed % 60)
+    }
+
   },
   mounted: function(){
     if (localStorage.elapseOfFeed) {
