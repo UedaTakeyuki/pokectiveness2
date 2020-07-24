@@ -26,6 +26,19 @@
         </template>
         <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-expansion-panel-content>
+
+      <v-expansion-panel-content>
+        <template v-slot:actions>
+          <v-icon color="primary">$vuetify.icons.expand</v-icon>
+        </template>
+        <template v-slot:header>
+          <div>メモ</div>
+        </template>
+        <Feed/>
+        <Raid/>
+
+      </v-expansion-panel-content>
+
     </v-expansion-panel>
 
   </div>
@@ -36,11 +49,14 @@ import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
+import Feed from '@/components/Feed'
+import Raid from '@/components/Raid'
+
 
 //module.exports = {
 export default {
   props: [],
-  components: {TypeButton},
+  components: {TypeButton, Feed, Raid},
   data: function () {
     return {
 //      s_lang: "ja",

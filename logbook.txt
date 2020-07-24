@@ -37,3 +37,5 @@
 2020.07.18 use local strage to remember settings
 2020.07.19 start to making Memo feature
 2020.07.20 Memo completed
+
+2020.07.24 top page memo
