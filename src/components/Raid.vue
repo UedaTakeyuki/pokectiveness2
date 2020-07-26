@@ -38,7 +38,8 @@ export default {
     }
   },
   methods: {
-    oneMinCrock: function(){
+    oneSecCrock: function(){
+//      const raidDuration = 1*60
       const raidDuration = 45*60
 //      const raidDuration = 25*60
       let raidStartTime = parseInt(localStorage.raidStartTime)
@@ -63,7 +64,7 @@ export default {
             this.afterRaid = duration - raidDuration
           }
         }
-        setTimeout(this.oneMinCrock, 60000)
+        setTimeout(this.oneSecCrock, 1000)
       }
     },
   },
@@ -75,7 +76,7 @@ export default {
         let now = new Date()
         let raidStartTime = now.getTime() + newRemainingMinutes*60*1000
         localStorage.raidStartTime = raidStartTime
-        this.oneMinCrock()
+        this.oneSecCrock()
       }
     }
   },
@@ -84,24 +85,24 @@ export default {
       return Math.floor(this.beforeRaidStart / 3600)
     },
     beforeRaidStartMinutes: function(){
-      return Math.floor((this.beforeRaidStart % 3600) /60)
+      return Math.ceil((this.beforeRaidStart % 3600) /60)
     },
     beforeRaidFinishHours: function(){
       return Math.floor(this.beforeRaidFinish / 3600)
     },
     beforeRaidFinishMinutes: function(){
-      return Math.floor((this.beforeRaidFinish % 3600) /60)
+      return Math.ceil((this.beforeRaidFinish % 3600) /60)
     },
     afterRaidHours: function(){
       return Math.floor(this.afterRaid / 3600)
     },
     afterRaidMinutes: function(){
-      return Math.floor((this.afterRaid % 3600) /60)
+      return Math.ceil((this.afterRaid % 3600) /60)
     },
   },
   mounted: function(){
     if (localStorage.raidStartTime) {
-      this.oneMinCrock()
+      this.oneSecCrock()
     }
   }
 }
