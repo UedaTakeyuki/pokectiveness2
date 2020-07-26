@@ -39,6 +39,8 @@ export default {
   },
   methods: {
     oneMinCrock: function(){
+//      const raidDuration = 45*60
+      const raidDuration = 25*60
       let raidStartTime = parseInt(localStorage.raidStartTime)
       let now = new Date()
       let duration =  Math.round((now.getTime() - raidStartTime)/1000)
@@ -51,14 +53,14 @@ export default {
           this.beforeRaidFinish = 0
           this.afterRaid = 0
         } else {
-          if (duration < 45*60){
+          if (duration < raidDuration){
             this.beforeRaidStart = 0
-            this.beforeRaidFinish = 45*60 -duration
+            this.beforeRaidFinish = raidDuration -duration
             this.afterRaid = 0
           } else {
             this.beforeRaidStart = 0
             this.beforeRaidFinish = 0
-            this.afterRaid = duration - 45*60
+            this.afterRaid = duration - raidDuration
           }
         }
         setTimeout(this.oneMinCrock, 60000)
@@ -78,17 +80,6 @@ export default {
     }
   },
   computed: {
-/*
-    elapsedHours: function(){
-      return Math.floor(this.elapseOfFeed / 3600)
-    },
-    elapsedMinutes: function(){
-      return Math.floor((this.elapseOfFeed % 3600) /60)
-    },
-    elapseSeconds: function(){
-      return Math.floor(this.elapseOfFeed % 60)
-    },
-*/
     beforeRaidStartHours: function(){
       return Math.floor(this.beforeRaidStart / 3600)
     },
@@ -109,11 +100,6 @@ export default {
     },
   },
   mounted: function(){
-/*
-    if (localStorage.elapseOfFeed) {
-      this.oneSecCrock()
-    }
-*/
     if (localStorage.raidStartTime) {
       this.oneMinCrock()
     }
