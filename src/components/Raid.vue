@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     oneMinCrock: function(){
-//      const raidDuration = 45*60
-      const raidDuration = 25*60
+      const raidDuration = 45*60
+//      const raidDuration = 25*60
       let raidStartTime = parseInt(localStorage.raidStartTime)
       let now = new Date()
       let duration =  Math.round((now.getTime() - raidStartTime)/1000)
