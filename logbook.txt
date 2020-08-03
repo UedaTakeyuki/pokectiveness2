@@ -39,3 +39,5 @@
 2020.07.20 Memo completed
 
 2020.07.24 top page memo
+
+2020.08.03 remember open/close status of Memo

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <v-expansion-panel>
+    <v-expansion-panel expand v-model="panel">
       <v-expansion-panel-content>
         <template v-slot:actions>
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
@@ -27,7 +27,7 @@
         <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
       </v-expansion-panel-content>
 
-      <v-expansion-panel-content>
+      <v-expansion-panel-content v-model="panel[2]">
         <template v-slot:actions>
           <v-icon color="primary">$vuetify.icons.expand</v-icon>
         </template>
@@ -59,6 +59,7 @@ export default {
   components: {TypeButton, Feed, Raid},
   data: function () {
     return {
+      panel: [false, false, false], // open/close status of panel-contents
 //      s_lang: "ja",
 //      l_lang: "japanese",
       wordings: wordings,
@@ -112,10 +113,21 @@ export default {
       return "/types/" + id;
     }
   },
+  watch: {
+    panel: function(newpanel, oldpanel){
+      localStorage.isMemoOpen = newpanel[2]
+    }
+  },
   computed: {
     l_lang: common.l_lang,
     s_lang: common.s_lang,
+  },
+  created: function(){
+  if (localStorage.isMemoOpen) {
+      this.panel[2] = localStorage.isMemoOpen.toLowerCase() === "true"
+    }
   }
+
 
 }
 
