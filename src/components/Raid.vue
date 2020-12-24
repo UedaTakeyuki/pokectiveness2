@@ -1,35 +1,40 @@
 <template>
   <v-card>
     <div v-if="beforeRaidStart">
-      レイド開始まで
-      <p v-if="beforeRaidStartHours" class="d-inline">{{beforeRaidStartHours}}時間 </p>
-      <p v-if="beforeRaidStartMinutes" class="d-inline">{{beforeRaidStartMinutes}}分 </p>
+      {{wordings.raid.to_start_raid[s_lang]}}
+      <p v-if="beforeRaidStartHours" class="d-inline">{{beforeRaidStartHours}}{wordings.time.hour[s_lang]}}</p>
+      <p v-if="beforeRaidStartMinutes" class="d-inline">{{beforeRaidStartMinutes}}{{wordings.time.minute[s_lang]}}</p>
     </div>
     <div v-if="beforeRaidFinish">
-      レイド終了まで
-      <p v-if="beforeRaidFinishHours" class="d-inline">{{beforeRaidFinishHours}}時間 </p>
-      <p v-if="beforeRaidFinishMinutes" class="d-inline">{{beforeRaidFinishMinutes}}分 </p>
+      {{wordings.raid.to_finish_raid[s_lang]}}
+      <p v-if="beforeRaidFinishHours" class="d-inline">{{beforeRaidFinishHours}}{wordings.time.hour[s_lang]}}</p>
+      <p v-if="beforeRaidFinishMinutes" class="d-inline">{{beforeRaidFinishMinutes}}分{{wordings.time.minute[s_lang]}}</p>
     </div>
     <div v-if="afterRaid">
-      レイド終了から
-      <p v-if="afterRaidHours" class="d-inline">{{afterRaidHours}}時間 </p>
-      <p v-if="afterRaidMinutes" class="d-inline">{{afterRaidMinutes}}分 </p>
+      {{wordings.raid.since_form_finish[s_lang]}}
+      <p v-if="afterRaidHours" class="d-inline">{{afterRaidHours}}{wordings.time.hour[s_lang]}}</p>
+      <p v-if="afterRaidMinutes" class="d-inline">{{afterRaidMinutes}}{{wordings.time.minute[s_lang]}}</p>
     </div>
     <v-select
       v-model="remainingMinutes"
       :items="items"
-      label="レイド開始まで残り時間（分）"
+      :label="wordings.raid.remaining[s_lang]"
     ></v-select>
   </v-card>
 </template>
 
 <script>
+import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
+
 const maxMinutes = 60; //表示したい数字より+1で設定。
 const minutesRange = [...Array(maxMinutes).keys()]
 
 export default {
   data () {
     return {
+      wordings: wordings,
+
       items: minutesRange,
       remainingMinutes: 0,
       beforeRaidStart: 0,
@@ -69,7 +74,7 @@ export default {
     },
   },
   watch: {
-    // eslint no-unused-vars
+    /* eslint no-unused-vars　*/
     remainingMinutes: function (newRemainingMinutes, oldRemainingMinutes) {
       // set to global
       if (newRemainingMinutes != 0){
@@ -99,6 +104,9 @@ export default {
     afterRaidMinutes: function(){
       return Math.ceil((this.afterRaid % 3600) /60)
     },
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
+
   },
   mounted: function(){
     if (localStorage.raidStartTime) {

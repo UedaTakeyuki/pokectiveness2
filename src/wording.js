@@ -46,6 +46,52 @@ export default {
       ja: "このアプリの QRコード",
       en: "QR code for this app."
     }
+  },
+  time: {
+    hour: {
+      ja: "時間",
+      en: " hour"
+    },
+    minute: {
+      ja: "分",
+      en: " minute"
+    },
+    second: {
+      ja: "秒",
+      en: " second"
+    },
+  },
+  feed:{
+    since: {
+      ja: "実をあげてから",
+      en: "Since I gave fruit "
+    },
+    have_passed: {
+      ja: "経過",
+      en: " have passed."
+    },
+    just_now: {
+      ja: "今、実をあげた",
+      en: "I gave fruit just now."
+    },
+  },
+  raid:{
+    to_start_raid: {
+      ja: "レイド開始まで",
+      en: "To start of the raid "
+    },
+    to_finish_raid: {
+      ja: "レイド終了まで",
+      en: "To finish the raid "
+    },
+    since_form_finish: {
+      ja: "レイド終了から",
+      en: "Since from the finish of the raid "
+    },
+    remaining: {
+      ja: "レイド開始まで残り時間（分）",
+      en: "Remaining time (minutes) until the start of the raid."
+    },
   }
 
 }

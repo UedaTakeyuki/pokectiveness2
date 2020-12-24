@@ -1,21 +1,27 @@
 <template>
   <v-card>
     <div v-if="elapseOfFeed">
-      実をあげてから
-      <p v-if="elapsedHours" class="d-inline">{{elapsedHours}}時間 </p>
-      <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes}}分 </p>
-      <p v-if="elapseSeconds" class="d-inline">{{elapseSeconds}}秒 </p>
-      経過
+      {{wordings.feed.since[s_lang]}}
+      <p v-if="elapsedHours" class="d-inline">{{elapsedHours}}{{wordings.time.hour[s_lang]}} </p>
+      <p v-if="elapsedMinutes" class="d-inline">{{elapsedMinutes}}{{wordings.time.minute[s_lang]}} </p>
+      <p v-if="elapseSeconds" class="d-inline">{{elapseSeconds}}{{wordings.time.second[s_lang]}} </p>
+      {{wordings.feed.have_passed[s_lang]}}
     </div>
-    <v-btn @click="setElapseOfFeed">今、実をあげた</v-btn>
+    <v-btn @click="setElapseOfFeed">{{wordings.feed.just_now[s_lang]}}</v-btn>
   </v-card>
 </template>
 
 <script>
+import common from '../common'; // common routines
+import wordings from '../wording'; // wording definitions
+
 export default {
   data () {
     return {
-      elapseOfFeed: 0,
+      wordings: wordings,
+
+      elapseOfFeed: 0, // elapse sec
+      thirtyMinuteCallDone: false,
     }
   },
   methods: {
@@ -31,8 +37,22 @@ export default {
       if (elapsed >= 3600 * 24){
         // Not interested in yesterday
         this.elapseOfFeed = 0
+        /* global localStrage */
         localStrage.removeItem("elapseOfFeed")
       } else {
+/*
+        if (elapsed >= 30){
+          if (!this.thirtyMinuteCallDone){
+            var speak   = new SpeechSynthesisUtterance();
+            speak.pitch = 0;
+            speak.lang  = 'ja-JP';
+            speak.text  = "三十分経ちました"
+            speechSynthesis.speak(speak);
+
+            this.thirtyMinuteCallDone = true
+          }
+        }
+*/
         this.elapseOfFeed = elapsed
         setTimeout(this.oneSecCrock, 1000)
       }
@@ -48,6 +68,9 @@ export default {
     elapseSeconds: function(){
       return Math.floor(this.elapseOfFeed % 60)
     },
+    l_lang: common.l_lang,
+    s_lang: common.s_lang,
+
   },
   mounted: function(){
     if (localStorage.elapseOfFeed) {

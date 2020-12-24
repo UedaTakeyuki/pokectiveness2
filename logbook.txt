@@ -41,3 +41,5 @@
 2020.07.24 top page memo
 
 2020.08.03 remember open/close status of Memo
+
+2020.12.23 wording for Feed.vue and Raid.vue
