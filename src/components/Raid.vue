@@ -7,13 +7,13 @@
     </div>
     <div v-if="beforeRaidFinish">
       {{wordings.raid.to_finish_raid[s_lang]}}
-      <p v-if="beforeRaidFinishHours" class="d-inline">{{beforeRaidFinishHours}}{wordings.time.hour[s_lang]}}</p>
-      <p v-if="beforeRaidFinishMinutes" class="d-inline">{{beforeRaidFinishMinutes}}分{{wordings.time.minute[s_lang]}}</p>
+      <p v-if="beforeRaidFinishHours" class="d-inline">{{beforeRaidFinishHours}} {wordings.time.hour[s_lang]}}</p>
+      <p v-if="beforeRaidFinishMinutes" class="d-inline">{{beforeRaidFinishMinutes}} {{wordings.time.minute[s_lang]}}</p>
     </div>
     <div v-if="afterRaid">
       {{wordings.raid.since_form_finish[s_lang]}}
-      <p v-if="afterRaidHours" class="d-inline">{{afterRaidHours}}{wordings.time.hour[s_lang]}}</p>
-      <p v-if="afterRaidMinutes" class="d-inline">{{afterRaidMinutes}}{{wordings.time.minute[s_lang]}}</p>
+      <p v-if="afterRaidHours" class="d-inline">{{afterRaidHours}} {{wordings.time.hour[s_lang]}}</p>
+      <p v-if="afterRaidMinutes" class="d-inline">{{afterRaidMinutes}} {{wordings.time.minute[s_lang]}}</p>
     </div>
     <v-select
       v-model="remainingMinutes"
