@@ -43,3 +43,4 @@
 2020.08.03 remember open/close status of Memo
 
 2020.12.23 wording for Feed.vue and Raid.vue
+2020.12.25 change using image pass from asset folder to server

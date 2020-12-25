@@ -5,8 +5,11 @@
 <!--      <v-img
           :src="require('@/assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + $route.params.id ).slice( -3 )+'.gif')"
       >-->
-      <v-img
+<!--      <v-img
           :src="require('@/'+image_path($route.params.id))"
+      >-->
+      <v-img
+          :src="image_path($route.params.id).replace('assets','https://assets.uedasoft.com/Pokemon')"
       >
       </v-img>
       <div>No. {{$route.params.id}}</div>
