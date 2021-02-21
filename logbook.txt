@@ -44,3 +44,5 @@
 
 2020.12.23 wording for Feed.vue and Raid.vue
 2020.12.25 change using image pass from asset folder to server
+
+2021.02.21 fix: not listed up the pockemons which name start with "ゼ"

@@ -72,8 +72,8 @@ export default {
         if (poke_id <= 721 || poke_id >= 808){
           return 'assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
         } else {
-          return 'assets/pokemon.json/images/'+('000' + poke_id ).slice( -3 )
-                  +this.getPokedexItemById(this.pokemons, poke_id).name.english+'.png';
+          return 'assets/pokemon.json/images/'+('000' + poke_id ).slice( -3 )+'.png';
+                //  +this.getPokedexItemById(this.pokemons, poke_id).name.english+'.png';
         }
       } 
     },
