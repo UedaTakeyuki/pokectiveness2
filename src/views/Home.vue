@@ -136,4 +136,6 @@ export default {
 /*  padding: 0; */
   margin: 0;
 }
+/* https://github.com/vuetifyjs/vuetify/issues/11925 */
+.v-expansion-panel-content__wrap { padding: 0 !important; }
 </style>
