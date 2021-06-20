@@ -1,45 +1,41 @@
 <template>
   <div class="home">
-    <v-expansion-panel expand v-model="panel">
-      <v-expansion-panel-content>
-        <template v-slot:actions>
-          <v-icon color="primary">$vuetify.icons.expand</v-icon>
-        </template>
-        <template v-slot:header>
-          <div>{{wordings.home.name[s_lang]}}</div>
-        </template>
-        <router-link 
-          v-for="letter in first_letters[this.$lang]"
-          v-bind:to="path_to_names_with_id(letter[1])"
-          :key="letter[0]"
-        >
-          <v-btn fab small>{{letter[0]}}</v-btn>
-        </router-link>
-      </v-expansion-panel-content>
+    <v-expansion-panels v-model="panel" accordion>
+      <v-expansion-panel>
+        <v-expansion-panel-header>
+          {{wordings.home.name[s_lang]}}
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <router-link 
+            v-for="letter in first_letters[this.$lang]"
+            v-bind:to="path_to_names_with_id(letter[1])"
+            :key="letter[0]"
+          >
+            <v-btn fab small>{{letter[0]}}</v-btn>
+          </router-link>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
 
-      <v-expansion-panel-content>
-        <template v-slot:actions>
-          <v-icon color="primary">$vuetify.icons.expand</v-icon>
-        </template>
-        <template v-slot:header>
-          <div>{{wordings.home.type[s_lang]}}</div>
-        </template>
-        <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
-      </v-expansion-panel-content>
+      <v-expansion-panel>
+        <v-expansion-panel-header>
+          {{wordings.home.type[s_lang]}}
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <TypeButton v-for="type_id in types.ids" :key="type_id" :type_id="type_id" :lang="s_lang" />
+        </v-expansion-panel-content>
+      </v-expansion-panel>
 
-      <v-expansion-panel-content v-model="panel[2]">
-        <template v-slot:actions>
-          <v-icon color="primary">$vuetify.icons.expand</v-icon>
-        </template>
-        <template v-slot:header>
-          <div>メモ</div>
-        </template>
-        <Feed/>
-        <Raid/>
+      <v-expansion-panel>
+        <v-expansion-panel-header>
+          メモ
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <Feed/>
+          <Raid/>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
 
-      </v-expansion-panel-content>
-
-    </v-expansion-panel>
+    </v-expansion-panels>
 
   </div>
 </template>
@@ -59,9 +55,8 @@ export default {
   components: {TypeButton, Feed, Raid},
   data: function () {
     return {
-      panel: [false, false, false], // open/close status of panel-contents
-//      s_lang: "ja",
-//      l_lang: "japanese",
+//      panel: localStorage.panel,
+      panel: 2,
       wordings: wordings,
       types: types,
       first_letters: {
@@ -115,7 +110,8 @@ export default {
   },
   watch: {
     panel: function(newpanel, oldpanel){
-      localStorage.isMemoOpen = newpanel[2]
+      console.log("newpanel", newpanel)
+      localStorage.panel = newpanel
     }
   },
   computed: {
@@ -123,9 +119,9 @@ export default {
     s_lang: common.s_lang,
   },
   created: function(){
-  if (localStorage.isMemoOpen) {
-      this.panel[2] = localStorage.isMemoOpen.toLowerCase() === "true"
-    }
+    console.log("localStorage.panel",localStorage.panel)
+    console.log("this.panel",this.panel)
+//    this.panel = localStorage.panel
   }
 
 
