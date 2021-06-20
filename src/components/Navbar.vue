@@ -1,12 +1,12 @@
 <template>
   <nav>
-    <v-toolbar>
+    <v-toolbar color="grey lighten-4">
       <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="grey--text">
         <span class="font-weight-light" style="font-family: 'Parisienne', cursive; text-shadow: 4px 4px 4px #aaa; font-size: 110%;">Pokéctiveness2</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat class="grey--text" v-if="$route.name != 'home'" @click="$router.back()">
+      <v-btn text class="grey--text" v-if="$route.name != 'home'" @click="$router.back()">
         <v-icon>arrow_back</v-icon><span>{{wordings.navbar.back[s_lang]}}</span>
       </v-btn>
     </v-toolbar>
