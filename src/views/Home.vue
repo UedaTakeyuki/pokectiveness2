@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <v-expansion-panels v-model="panel" accordion>
+    <v-expansion-panels v-model="openedPanel" multiple accordion>
       <v-expansion-panel>
         <v-expansion-panel-header>
           {{wordings.home.name[s_lang]}}
@@ -56,7 +56,7 @@ export default {
   data: function () {
     return {
 //      panel: localStorage.panel,
-      panel: 2,
+      openedPanel: [],
       wordings: wordings,
       types: types,
       first_letters: {
@@ -106,12 +106,18 @@ export default {
     },
     path_to_types_with_id: function(id){
       return "/types/" + id;
-    }
+    },
   },
   watch: {
-    panel: function(newpanel, oldpanel){
+    openedPanel: function(newpanel, oldpanel){
       console.log("newpanel", newpanel)
-      localStorage.panel = newpanel
+      if (newpanel.indexOf(2) != -1){
+        console.log("panel2 open")
+        localStorage.setItem("panel2", "true")
+      } else {
+        console.log("pannel2 close")
+        localStorage.setItem("panel2", "false")
+      }
     }
   },
   computed: {
@@ -119,8 +125,10 @@ export default {
     s_lang: common.s_lang,
   },
   created: function(){
-    console.log("localStorage.panel",localStorage.panel)
-    console.log("this.panel",this.panel)
+    console.log("localStorage.panel2",localStorage.getItem("panel2"))
+    if (localStorage.getItem("panel2") == "true"){
+      this.openedPanel.push(2)
+    }
 //    this.panel = localStorage.panel
   }
 

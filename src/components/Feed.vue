@@ -37,8 +37,8 @@ export default {
       if (elapsed >= 3600 * 24){
         // Not interested in yesterday
         this.elapseOfFeed = 0
-        /* global localStrage */
-        localStrage.removeItem("elapseOfFeed")
+        /* global localStorage */
+        localStorage.removeItem("elapseOfFeed")
       } else {
 /*
         if (elapsed >= 30){

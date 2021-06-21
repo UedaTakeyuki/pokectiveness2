@@ -66,7 +66,7 @@ export default {
     lang: function (newlang, oldlang) {
     // set to global
     this.$lang=this.lang_selectmenu2setting(newlang);
-    // set to localStrage
+    // set to localStorage
     localStorage.$lang=this.$lang;
     }
   },
