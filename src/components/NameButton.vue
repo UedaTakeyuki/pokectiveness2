@@ -1,6 +1,6 @@
 <template>
   <router-link v-bind:to="path_to_pokemon_with_id(poke_id)">
-    <v-btn small>{{pokemons[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn>
+    <v-btn small tile>{{pokemons[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn>
   </router-link>
 </template>
 

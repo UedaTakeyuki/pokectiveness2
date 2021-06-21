@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <v-expansion-panels v-model="openedPanel" multiple accordion>
+    <v-expansion-panels v-model="openedPanel" multiple accordion tile>
       <v-expansion-panel>
         <v-expansion-panel-header>
           {{wordings.home.name[s_lang]}}
