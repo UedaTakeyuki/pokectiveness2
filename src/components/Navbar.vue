@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-toolbar color="grey lighten-4">
+    <v-toolbar color="grey lighten-4" class="elevation-6">
       <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="grey--text">
         <span class="font-weight-light" style="font-family: 'Parisienne', cursive; text-shadow: 4px 4px 4px #aaa; font-size: 110%;">Pokéctiveness2</span>

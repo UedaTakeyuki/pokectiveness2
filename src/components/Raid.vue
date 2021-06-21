@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card tile>
     <div v-if="beforeRaidStart">
       {{wordings.raid.to_start_raid[s_lang]}}
       <p v-if="beforeRaidStartHours" class="d-inline">{{beforeRaidStartHours}}{wordings.time.hour[s_lang]}}</p>

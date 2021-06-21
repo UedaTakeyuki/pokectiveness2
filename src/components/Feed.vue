@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card tile>
     <div v-if="elapseOfFeed">
       {{wordings.feed.since[s_lang]}}
       <p v-if="elapsedHours" class="d-inline">{{elapsedHours}}{{wordings.time.hour[s_lang]}} </p>

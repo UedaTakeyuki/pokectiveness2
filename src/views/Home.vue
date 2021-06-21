@@ -146,4 +146,10 @@ export default {
 }
 /* https://github.com/vuetifyjs/vuetify/issues/11925 */
 .v-expansion-panel-content__wrap { padding: 0 !important; }
+.v-main {
+  background-color: #F5F5F5;
+}
+.v-footer {
+  text-align: center;
+}
 </style>

@@ -2,9 +2,9 @@
   <v-app>
     <Navbar />
 
-    <v-content>
+    <v-main>
       <router-view></router-view>
-    </v-content>
+    </v-main>
 
     <v-footer app>
       <v-flex text-xs-center>
@@ -29,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-footer {
+  font-size: 14px;
+}
+</style>

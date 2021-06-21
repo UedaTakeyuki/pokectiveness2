@@ -8,7 +8,10 @@
 /* https://stackoverflow.com/questions/47331310/changing-vuetifys-button-width-and-padding */
 .v-btn {
   min-width: 0;
-/*  padding: 0; */
+  padding-left: 8px!important;
+  padding-right: 8px!important;
+  font-size: 13px!important;
+  letter-spacing: normal!important;
   margin: 0;
 }
 </style>
