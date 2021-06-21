@@ -2,7 +2,7 @@
   <router-link 
   v-bind:to="path_to_types_with_id(type_id)"
   >
-  <v-btn small v-bind:color="types.chipscolor[type_id]">{{types.typename[lang][type_id]}}</v-btn>
+  <v-btn small v-bind:color="types.chipscolor[type_id]" tile>{{types.typename[lang][type_id]}}</v-btn>
   </router-link>  
 </template>
 

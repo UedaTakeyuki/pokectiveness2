@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card tile>
     <div v-if="beforeRaidStart">
       {{wordings.raid.to_start_raid[s_lang]}}
       <p v-if="beforeRaidStartHours" class="d-inline">{{beforeRaidStartHours}}{wordings.time.hour[s_lang]}}</p>
@@ -52,7 +52,7 @@ export default {
       let duration =  Math.round((now.getTime() - raidStartTime)/1000)
       if (duration >= 3600 * 24){
         // Not interested in yesterday
-        localStrage.removeItem("raidStartTime")
+        localStorage.removeItem("raidStartTime")
       } else {
         if (duration < 0){
           this.beforeRaidStart  = -duration

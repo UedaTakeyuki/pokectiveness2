@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card tile>
     <div v-if="elapseOfFeed">
       {{wordings.feed.since[s_lang]}}
       <p v-if="elapsedHours" class="d-inline">{{elapsedHours}}{{wordings.time.hour[s_lang]}} </p>
@@ -37,8 +37,8 @@ export default {
       if (elapsed >= 3600 * 24){
         // Not interested in yesterday
         this.elapseOfFeed = 0
-        /* global localStrage */
-        localStrage.removeItem("elapseOfFeed")
+        /* global localStorage */
+        localStorage.removeItem("elapseOfFeed")
       } else {
 /*
         if (elapsed >= 30){

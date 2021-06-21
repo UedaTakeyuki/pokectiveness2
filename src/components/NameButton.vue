@@ -1,6 +1,6 @@
 <template>
   <router-link v-bind:to="path_to_pokemon_with_id(poke_id)">
-    <v-btn small>{{pokemons[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn>
+    <v-btn small tile>{{pokemons[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn>
   </router-link>
 </template>
 
@@ -8,7 +8,10 @@
 /* https://stackoverflow.com/questions/47331310/changing-vuetifys-button-width-and-padding */
 .v-btn {
   min-width: 0;
-/*  padding: 0; */
+  padding-left: 8px!important;
+  padding-right: 8px!important;
+  font-size: 13px!important;
+  letter-spacing: normal!important;
   margin: 0;
 }
 </style>

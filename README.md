@@ -39,3 +39,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## versions
+- v1.0 first release
+- v2.0 butify 1.5 -> 2.0
+  - https://qiita.com/filunK/items/e71999d5abef404744b3
+  - https://vuetifyjs.com/ja/getting-started/upgrade-guide/
+  - https://stackoverflow.com/questions/66082397/typeerror-this-getoptions-is-not-a-function
+  - add Material design icon https://vuetifyjs.com/ja/features/icon-fonts/#material-design-icons
+  - v-list https://vuetifyjs.com/ja/getting-started/upgrade-guide/#v-list-et-a
