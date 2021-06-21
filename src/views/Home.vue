@@ -109,13 +109,13 @@ export default {
     },
   },
   watch: {
-    openedPanel: function(newpanel, oldpanel){
-      console.log("newpanel", newpanel)
+    openedPanel: function(newpanel/*, oldpanel*/){
+//      console.log("newpanel", newpanel)
       if (newpanel.indexOf(2) != -1){
-        console.log("panel2 open")
+  //      console.log("panel2 open")
         localStorage.setItem("panel2", "true")
       } else {
-        console.log("pannel2 close")
+//        console.log("pannel2 close")
         localStorage.setItem("panel2", "false")
       }
     }
@@ -125,7 +125,7 @@ export default {
     s_lang: common.s_lang,
   },
   created: function(){
-    console.log("localStorage.panel2",localStorage.getItem("panel2"))
+//    console.log("localStorage.panel2",localStorage.getItem("panel2"))
     if (localStorage.getItem("panel2") == "true"){
       this.openedPanel.push(2)
     }

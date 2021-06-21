@@ -39,8 +39,8 @@ export default {
         default:
           break;
       }
-      console.log(lang)
-      console.log(result)
+//      console.log(lang)
+//      console.log(result)
       return result;
     },
     lang_selectmenu2setting: (lang) =>{
@@ -63,7 +63,7 @@ export default {
   },
   watch: {
     // eslint no-unused-vars
-    lang: function (newlang, oldlang) {
+    lang: function (newlang/*, oldlang*/) {
     // set to global
     this.$lang=this.lang_selectmenu2setting(newlang);
     // set to localStorage

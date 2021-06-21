@@ -74,8 +74,7 @@ export default {
     },
   },
   watch: {
-    /* eslint no-unused-vars　*/
-    remainingMinutes: function (newRemainingMinutes, oldRemainingMinutes) {
+    remainingMinutes: function (newRemainingMinutes/*, oldRemainingMinutes*/) {
       // set to global
       if (newRemainingMinutes != 0){
         let now = new Date()
