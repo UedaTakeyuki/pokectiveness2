@@ -50,3 +50,4 @@
 2021.06.19 merge security updates
 2021.06.20 v2.0 first version.
 2021.06.21 l&f fine-tuning, fix warning and lint errors.
+2021.06.22 v3.0 firebase hosting 
