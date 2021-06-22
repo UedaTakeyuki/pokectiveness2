@@ -48,3 +48,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - https://stackoverflow.com/questions/66082397/typeerror-this-getoptions-is-not-a-function
   - add Material design icon https://vuetifyjs.com/ja/features/icon-fonts/#material-design-icons
   - v-list https://vuetifyjs.com/ja/getting-started/upgrade-guide/#v-list-et-a
+- v3.0 firebase hosting
