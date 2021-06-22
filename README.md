@@ -49,3 +49,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   - add Material design icon https://vuetifyjs.com/ja/features/icon-fonts/#material-design-icons
   - v-list https://vuetifyjs.com/ja/getting-started/upgrade-guide/#v-list-et-a
 - v3.0 firebase hosting
+  - Netlify: pokectiveness2 CNAME pokectiveness2.netlify.com.
