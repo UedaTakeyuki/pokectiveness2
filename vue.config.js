@@ -12,8 +12,8 @@ module.exports = {
 //      firebase: 'firebase',
 //      'firebase/auth': 'firebase',
 //      firebaseui: 'firebaseui',
-//      vue: 'Vue',
-//      vuetify: 'Vuetify',
+      vue: 'Vue',
+      vuetify: 'Vuetify',
 //      'vuetify/lib': 'Vuetify',
     })
   }
