@@ -54,3 +54,5 @@
 
 2021.07.04 use vue & vuetify from CDN
 2021.07.06 fix vue cdn
+
+2021.08.24 add pokemon_json and french name

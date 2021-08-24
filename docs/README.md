@@ -138,6 +138,7 @@ Pokéctiveness2 uses the following services, open source libraries and resources
 
 - [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
 - [Pokemon.json](https://github.com/fanzeyi/pokemon.json)
+- [pokemon_json](https://github.com/johnuberbacher/pokemon_json)
 - [Vue](https://github.com/vuejs/vue)
 - [Vuetify](https://github.com/vuetifyjs/vuetify)
 - [VuePress](https://github.com/vuejs/vuepress)
