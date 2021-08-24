@@ -56,3 +56,4 @@
 2021.07.06 fix vue cdn
 
 2021.08.24 add pokemon_json and french name
+           comment out console log
