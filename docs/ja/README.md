@@ -136,6 +136,7 @@ Pokéctiveness2 は以下のサービス、オープンソースのライブラ�
 
 - [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
 - [Pokemon.json](https://github.com/fanzeyi/pokemon.json)
+- [pokemon_json](https://github.com/johnuberbacher/pokemon_json)
 - [Vue](https://github.com/vuejs/vue)
 - [Vuetify](https://github.com/vuetifyjs/vuetify)
 - [VuePress](https://github.com/vuejs/vuepress)

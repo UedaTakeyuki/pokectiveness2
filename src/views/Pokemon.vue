@@ -2,20 +2,20 @@
   <div class="pokemon">
     <v-card color="blue-grey darken-2" class="white--text">
       <h3>{{pokemons[$route.params.id - 1].name[l_lang]}}{{alolan_form_str}}</h3>
-<!--      <v-img
-          :src="require('@/assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + $route.params.id ).slice( -3 )+'.gif')"
-      >-->
-<!--      <v-img
-          :src="require('@/'+image_path($route.params.id))"
-      >-->
       <v-img
           :src="image_path($route.params.id).replace('assets','https://assets.uedasoft.com/Pokemon')"
       >
       </v-img>
-      <div>No. {{$route.params.id}}</div>
-      <div>和名：{{pokemons[$route.params.id - 1].name["japanese"]}}{{alola ? ' アローラのすがた' : ''}}</div>
-      <div>English：{{pokemons[$route.params.id - 1].name["english"]}}{{alola ? ' alolan' : ''}}</div>
-      <div>中文：{{pokemons[$route.params.id - 1].name["chinese"]}}{{alola ? ' 阿羅拉的樣子' : ''}}</div>
+<!--
+      <v-img
+          :src="pokemon_json[id].hires"
+      >
+      </v-img> -->
+      <div>No. {{id}}</div>
+      <div>和名：{{pokemons[id].name.japanese}}{{alola ? ' アローラのすがた' : ''}}</div>
+      <div>English：{{pokemons[id].name.english}}{{alola ? ' alolan' : ''}}</div>
+      <div>Français：{{pokemon_json[id].name.french}}{{alola ? ' alolan' : ''}}</div>
+      <div>中文：{{pokemons[id].name.chinese}}{{alola ? ' 阿羅拉的樣子' : ''}}</div>
       {{wordings.pokemon.type[s_lang]}}：
 <!--      <TypeButton v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id" :type_id="type_id" :lang="s_lang" />
       <div v-for="type_id in pokemons[$route.params.id - 1].type" :key="type_id">
@@ -39,6 +39,8 @@ import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
+import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+
 
 //module.exports = {
 export default {
@@ -51,7 +53,8 @@ export default {
       wordings: wordings,
       pokemons: pokemons,
       pokemons_alolan: pokemons_alolan,
-      types: types
+      types: types,
+      pokemon_json: pokemon_json
     }
   },
   methods: {
@@ -103,6 +106,9 @@ export default {
         return "";
       }
     },
+    id: function(){
+      return this.$route.params.id - 1
+    }
   }
 }
 </script>
