@@ -1,6 +1,7 @@
 <template>
   <router-link v-bind:to="path_to_pokemon_with_id(poke_id)">
-    <v-btn small tile>{{pokemons[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn>
+<!--    <v-btn small tile>{{pokemons[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn> -->
+    <v-btn small tile>{{pokemon_json[poke_id - 1].name[lang]}}{{alola ? wordings.alola_general.alolan_form_str[s_lang] : ""}}</v-btn>
   </router-link>
 </template>
 
@@ -18,6 +19,8 @@
 
 <script>
 import pokemons from '../pokedex';
+import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+
 import types from '@/typeeffectiveness';
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
@@ -28,6 +31,7 @@ export default {
     return {
       wordings: wordings,
       pokemons: pokemons,
+      pokemon_json: pokemon_json,
       types:types,
     }
   },
