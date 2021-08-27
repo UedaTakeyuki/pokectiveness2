@@ -40,6 +40,7 @@ import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
 import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+import types_json from '@/assets/johnuberbacher_types.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/types.json
 
 
 //module.exports = {
@@ -54,7 +55,8 @@ export default {
       pokemons: pokemons,
       pokemons_alolan: pokemons_alolan,
       types: types,
-      pokemon_json: pokemon_json
+      pokemon_json: pokemon_json,
+      types_json: types_json
     }
   },
   methods: {
