@@ -47,6 +47,7 @@ import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
 import Feed from '@/components/Feed'
 import Raid from '@/components/Raid'
+import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
 
 
 //module.exports = {
@@ -91,6 +92,8 @@ export default {
         ["O","O"],["P","P"],["Q","Q"],["R","R"],["S","S"],["T","T"],["U","U"],
         ["V","V"],["W","W"],["X","X"],["Y","Y"],["Z","Z"]
         ],
+        zh:
+        Array.from(new Set(pokemon_json.map(p => p.name.chinese[0]))).sort(function(x,y){return x.localeCompare(y, 'zh-CN')}).map(p => [p,p])
       }
     } 
   },

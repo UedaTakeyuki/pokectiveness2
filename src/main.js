@@ -20,7 +20,6 @@ const get_browser_lang = () => {
       case /zh.*/.test(browser_lang):
         return "zh";
   //      break;
-  //    case "zh-CN"
       default:
         return "en";
   //      break;
