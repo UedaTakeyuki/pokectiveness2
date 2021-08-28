@@ -76,14 +76,17 @@ export default {
       doc_links: {
         en: {icon: '', text: 'How To Use', route: '/docs'},
         ja: {icon: '', text: '使い方', route: '/docs/ja'},
+        zh: {icon: '', text: '使い方', route: '/docs/ja'},
       },
       doc_links2: {
         en: {icon: '', text: 'Settings', route: '/settings'},
         ja: {icon: '', text: '設定', route: '/settings'},
+        zh: {icon: '', text: '設定', route: '/settings'},
       },
       doc_links3: {
         en: {icon: '', text: 'Memo', route: '/memo'},
         ja: {icon: '', text: 'メモ', route: '/memo'},
+        zh: {icon: '', text: 'メモ', route: '/memo'},
       },
     }
   },

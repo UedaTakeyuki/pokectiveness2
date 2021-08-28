@@ -63,7 +63,7 @@ export default
 			Fairy: "フェアリー",
 		},
 		// https://www.reddit.com/r/TheSilphRoad/comments/5417te/chinese_characters_for_naming_your_pokemon_move/		
-		cn:{
+		zh:{
 			Normal: "普	",
 			Fighting: "武",
 			Poison: "武",
@@ -221,6 +221,22 @@ export default
 				supper: "効果はばつぐん！",
 				not: "効果はいまひとつ！",
 				no: "効果がない！",
-		}
+		},
+		zh:{
+			opponent: "对手",
+			select: "(触控切换)",
+			chose: "选择对手",
+			supper: "超级有效！",
+			not: "抗！",
+			no: "免疫的！",
+		},
+		fr:{
+			opponent: "Opponent: ",
+			select: " (Touch here)",
+			chose: "Choose Types",
+			supper: "Très Efficace !",
+			not: "Résistances !",
+			no: "Immunisés !",
+		},
 	}
 }
