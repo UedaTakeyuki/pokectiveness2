@@ -19,7 +19,9 @@ const get_browser_lang = () => {
         return "ja";
       case /zh.*/.test(browser_lang):
         return "zh";
-  //      break;
+      case /fr.*/.test(browser_lang):
+        return "fr";
+    //      break;
       default:
         return "en";
   //      break;

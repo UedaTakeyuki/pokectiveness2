@@ -20,7 +20,7 @@ export default {
   data: function () {
     return {
       wordings: wordings,
-      langs: ['English','日本語', '汉语'],
+      langs: ['English','Français','日本語', '汉语'],
       lang: "",
 //      lang: this.lang_setting2selectmenu(this.$lang),
 //      ↑ dont workd, this.$lang is not ready before created.
@@ -32,6 +32,9 @@ export default {
       switch (lang){
         case 'en':
           result = 'English';
+          break;
+        case 'fr':
+          result = 'Français';
           break;
         case 'ja':
           result = '日本語'
@@ -51,6 +54,9 @@ export default {
       switch (lang){
         case 'English':
           result = 'en';
+          break;
+        case 'Français':
+          result = 'fr';
           break;
         case '日本語':
           result = 'ja'
