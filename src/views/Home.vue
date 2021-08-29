@@ -56,6 +56,8 @@ export default {
   components: {TypeButton, Feed, Raid},
   data: function () {
     return {
+      pokemon_json: pokemon_json,
+
 //      panel: localStorage.panel,
       openedPanel: [],
       wordings: wordings,
@@ -74,7 +76,9 @@ export default {
        ["わ"]
       ],
 */
-        ja: 
+        ja:
+        Array.from(new Set(pokemon_json.map(p => p.name.japanese[0]))).sort(function(x,y){return x.localeCompare(y, 'ja')}).map(p => [p,p]),
+/*
         [["あ","ア"],["い","イ"],["う","ウ"],["え","エ"],["お","オ"],
         ["か","カガ"],["き","キギ"],["く","クグ"],["け","ケゲ"],["こ","コゴ"],
         ["さ","サザ"],["し","シジ"],["す","スズ"],["せ","セゼ"],["そ","ソゾ"],
@@ -86,14 +90,21 @@ export default {
         ["ら","ラ"],["り","リ"],["る","ル"],["れ","レ"],["ろ","ロ"],
         ["わ","ワ"]
         ],
+*/
         en:
+        Array.from(new Set(pokemon_json.map(p => p.name.english[0]))).sort(function(x,y){return x.localeCompare(y, 'en')}).map(p => [p,p]),
+/*
         [["A","A"],["B","B"],["C","C"],["D","D"],["E","E"],["F","F"],["G","G"],
         ["H","H"],["I","I"],["J","J"],["K","K"],["L","L"],["M","M"],["N","N"],
         ["O","O"],["P","P"],["Q","Q"],["R","R"],["S","S"],["T","T"],["U","U"],
         ["V","V"],["W","W"],["X","X"],["Y","Y"],["Z","Z"]
         ],
+*/
+        // https://stackoverflow.com/questions/22907288/chinese-sorting-by-pinyin-in-javascript-with-localecompare
         zh:
-        Array.from(new Set(pokemon_json.map(p => p.name.chinese[0]))).sort(function(x,y){return x.localeCompare(y, 'zh-CN')}).map(p => [p,p])
+        Array.from(new Set(pokemon_json.map(p => p.name.chinese[0]))).sort(function(x,y){return x.localeCompare(y, 'zh')}).map(p => [p,p]),
+        fr:
+        Array.from(new Set(pokemon_json.map(p => p.name.french[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
       }
     } 
   },

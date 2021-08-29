@@ -41,7 +41,7 @@ export default {
     alolan_form_str: {
       ja: " アローラのすがた",
       en: " alolan",
-      zh: " アローラのすがた"
+      zh: " 阿羅拉的樣子"
     }
   },
   navbar: {
@@ -77,7 +77,7 @@ export default {
     since: {
       ja: "実をあげてから",
       en: "Since I gave fruit ",
-      zh: "未をあげてから"
+      zh: "実をあげてから"
     },
     have_passed: {
       ja: "経過",
