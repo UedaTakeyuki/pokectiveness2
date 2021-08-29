@@ -1,6 +1,8 @@
 export default {
   l_lang: function(){
     switch(this.$lang){
+      case "fr":
+        return "french";
       case "ja":
         return "japanese";
       case "zh":
