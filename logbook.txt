@@ -62,3 +62,5 @@
 2021.08.30 フランス語対応
 
 2022.02.21 fix: vue-router cdn fix version as @3
+
+2022.08.21 fix: The No. of Pokémon was off by 1.

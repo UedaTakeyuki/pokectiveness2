@@ -13,7 +13,7 @@
       >
       </v-img>
 -->
-      <div>No. {{id}}</div>
+      <div>No. {{id+1}}</div>
       <div>和名：{{pokemon_json[id].name.japanese}}{{alola ? ' アローラのすがた' : ''}}</div>
       <div>English：{{pokemon_json[id].name.english}}{{alola ? ' alolan' : ''}}</div>
       <div>Français：{{pokemon_json[id].name.french}}{{alola ? ' alolan' : ''}}</div>
