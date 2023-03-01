@@ -14,7 +14,7 @@ export default {
   s_lang: function(){
     return this.$lang;
   },
-  getPokedexItemById: function(pokedex, poke_id){
+/*}  getPokedexItemById: function(pokedex, poke_id){
     return pokedex.filter(function(element){return (element.id == poke_id);})[0]
-  },
+  },*/
 }
