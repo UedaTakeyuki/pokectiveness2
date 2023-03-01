@@ -37,7 +37,7 @@
 
 <script>
 import pokemons_alolan from '../alola';
-import pokemons from '../pokedex';
+//import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
@@ -55,7 +55,7 @@ export default {
 //     s_lang: "ja",
 //      l_lang: "japanese",
       wordings: wordings,
-      pokemons: pokemons,
+//      pokemons: pokemons,
       pokemons_alolan: pokemons_alolan,
       types: types,
       pokemon_json: pokemon_json,

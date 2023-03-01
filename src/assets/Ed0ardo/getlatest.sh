@@ -1,0 +1,1 @@
+svn export https://github.com/Ed0ardo/PokedexJSON/trunk/pokedex.json
