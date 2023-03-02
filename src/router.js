@@ -3,7 +3,10 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Types from './views/Types.vue'
 import Pokemon from './views/Pokemon.vue'
+import Names from './views/Names.vue'
 import News from './views/News.vue'
+import Memo from './views/Memo.vue'
+import Settings from './views/Settings.vue'
 //import Pokemon_alola from './views/Pokemon_alola.vue'
 import ga from 'vue-ga'
 //import pokedex from './pokedex'
@@ -39,7 +42,6 @@ const router =  new Router({
     {
       path: '/pokemon_alola/:id',
       name: 'pokemon_alola',
-//      component: Pokemon_alola,
       component: Pokemon,
       props: {
         alola: true,
@@ -51,21 +53,21 @@ const router =  new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Names.vue'),
+      component: Names,
       props: {}
 //      props: {poke: name_a}
     },
     {
       path: '/settings',
       name: 'settings',
-      component: () => import(/* webpackChunkName: "about" */ './views/Settings.vue'),
+      component:Settings,
       props: {}
 //      props: {poke: name_a}
     },
     {
       path: '/memo',
       name: 'memo',
-      component: () => import(/* webpackChunkName: "about" */ './views/Memo.vue'),
+      component: Memo,
       props: {}
 //      props: {poke: name_a}
     },
