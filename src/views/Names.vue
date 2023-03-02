@@ -37,7 +37,6 @@ export default {
   },
   methods: {
     pokemon_whose_name_start_with(str){
-      console.log("pokemon_json", pokemon_json)
       return pokemon_json.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
     },
     pokemon_alola_whose_name_start_with(str){

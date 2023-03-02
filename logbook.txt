@@ -66,3 +66,5 @@
 2022.08.21 fix: The No. of Pokémon was off by 1.
 
 2023.01.31 v4 start
+2023.03.02 v4 finished
+           add news
