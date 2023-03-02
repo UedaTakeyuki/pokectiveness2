@@ -115,6 +115,7 @@ func main() {
 	}
 
 	var pokedexJson []byte
+	// https://stackoverflow.com/a/19038873/11073131
 	pokedexJson, err = json.MarshalIndent(pokedex, "", "    ")
 	if err != nil {
 		log.Println(err)
