@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>News</p>
+    <p class="grey--text text-h5 pt-3 pl-3" >News</p>
     <v-card>
       <v-card-title>
         Generation 9 are now supported.
@@ -10,7 +10,7 @@
       </v-card-subtitle>
       <v-card-text>
         The Pokémons of Generation 9 are supported. 
-        Supported Pokémons are from <router-link :to="{name: 'pokemon', params: { id: 1 }}">#0001</router-link>
+        Now, the supported Pokémons are from <router-link :to="{name: 'pokemon', params: { id: 1 }}">#0001</router-link>
         to <router-link :to="{name: 'pokemon', params: { id: 1008 }}">1008</router-link>.
       </v-card-text>
     </v-card>

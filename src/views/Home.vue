@@ -47,8 +47,8 @@ import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
 import Feed from '@/components/Feed'
 import Raid from '@/components/Raid'
-import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
-
+//import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+import pokemon_json from '../pokedex'
 
 //module.exports = {
 export default {
@@ -77,7 +77,7 @@ export default {
       ],
 */
         ja:
-        Array.from(new Set(pokemon_json.map(p => p.name.japanese[0]))).sort(function(x,y){return x.localeCompare(y, 'ja')}).map(p => [p,p]),
+        Array.from(new Set(pokemon_json.map(p => p.name.jpn[0]))).sort(function(x,y){return x.localeCompare(y, 'ja')}).map(p => [p,p]),
 /*
         [["あ","ア"],["い","イ"],["う","ウ"],["え","エ"],["お","オ"],
         ["か","カガ"],["き","キギ"],["く","クグ"],["け","ケゲ"],["こ","コゴ"],
@@ -92,7 +92,7 @@ export default {
         ],
 */
         en:
-        Array.from(new Set(pokemon_json.map(p => p.name.english[0]))).sort(function(x,y){return x.localeCompare(y, 'en')}).map(p => [p,p]),
+        Array.from(new Set(pokemon_json.map(p => p.name.eng[0]))).sort(function(x,y){return x.localeCompare(y, 'en')}).map(p => [p,p]),
 /*
         [["A","A"],["B","B"],["C","C"],["D","D"],["E","E"],["F","F"],["G","G"],
         ["H","H"],["I","I"],["J","J"],["K","K"],["L","L"],["M","M"],["N","N"],
@@ -102,9 +102,9 @@ export default {
 */
         // https://stackoverflow.com/questions/22907288/chinese-sorting-by-pinyin-in-javascript-with-localecompare
         zh:
-        Array.from(new Set(pokemon_json.map(p => p.name.chinese[0]))).sort(function(x,y){return x.localeCompare(y, 'zh')}).map(p => [p,p]),
+        Array.from(new Set(pokemon_json.map(p => p.name.cht[0]))).sort(function(x,y){return x.localeCompare(y, 'zh')}).map(p => [p,p]),
         fr:
-        Array.from(new Set(pokemon_json.map(p => p.name.french[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
+        Array.from(new Set(pokemon_json.map(p => p.name.fra[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
       }
     } 
   },
