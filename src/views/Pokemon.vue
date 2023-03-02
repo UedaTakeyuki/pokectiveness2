@@ -3,7 +3,7 @@
     <v-card color="blue-grey darken-2" class="white--text">
       <h3>{{pokemon_json[$route.params.id - 1].name[l_lang]}}{{alolan_form_str}}</h3>
       <v-img
-          :src="image_path($route.params.id).replace('assets','https://assets.uedasoft.com/Pokemon')"
+          :src="image_path($route.params.id)"
       >
       </v-img>
 <!--
@@ -14,10 +14,10 @@
       </v-img>
 -->
       <div>No. {{id+1}}</div>
-      <div>和名：{{pokemon_json[id].name.japanese}}{{alola ? ' アローラのすがた' : ''}}</div>
-      <div>English：{{pokemon_json[id].name.english}}{{alola ? ' alolan' : ''}}</div>
-      <div>Français：{{pokemon_json[id].name.french}}{{alola ? ' alolan' : ''}}</div>
-      <div>中文：{{pokemon_json[id].name.chinese}}{{alola ? ' 阿羅拉的樣子' : ''}}</div>
+      <div>和名：{{pokemon_json[id].name.jpn}}{{alola ? ' アローラのすがた' : ''}}</div>
+      <div>English：{{pokemon_json[id].name.eng}}{{alola ? ' alolan' : ''}}</div>
+      <div>Français：{{pokemon_json[id].name.fra}}{{alola ? ' alolan' : ''}}</div>
+      <div>中文：{{pokemon_json[id].name.cht}}{{alola ? ' 阿羅拉的樣子' : ''}}</div>
 <!--
       <div>和名：{{pokemons[id].name.japanese}}{{alola ? ' アローラのすがた' : ''}}</div>
       <div>English：{{pokemons[id].name.english}}{{alola ? ' alolan' : ''}}</div>
@@ -37,12 +37,13 @@
 
 <script>
 import pokemons_alolan from '../alola';
-import pokemons from '../pokedex';
+//import pokemons from '../pokedex';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
-import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+//import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+import pokemon_json from '../pokedex'
 import types_json from '@/assets/johnuberbacher_types.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/types.json
 
 
@@ -55,7 +56,7 @@ export default {
 //     s_lang: "ja",
 //      l_lang: "japanese",
       wordings: wordings,
-      pokemons: pokemons,
+//      pokemons: pokemons,
       pokemons_alolan: pokemons_alolan,
       types: types,
       pokemon_json: pokemon_json,
@@ -75,13 +76,17 @@ export default {
     image_path: function(poke_id){
       if (this.alola) {
 //        return 'assets/ProfesseurOak/img/alola/'+poke_id+'.png';
-        return 'assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'-alola.gif';
+        return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'-alola.gif';
       } else {
         if (poke_id <= 721){
-          return 'assets/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
+          return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
         } else {
-          return 'assets/pokemon_json/images/pokedex/thumbnails/'+('000' + poke_id ).slice( -3 )+'.png';
-                //  +this.getPokedexItemById(this.pokemons, poke_id).name.english+'.png';
+          if (poke_id < 1000){
+            return 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+('000' + poke_id ).slice( -3 )+'.png';
+          } else {
+            return 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+ poke_id +'.png';
+          }
+//          return 'https://assets.uedasoft.com/Pokemon/pokemon_json/images/pokedex/thumbnails/'+('000' + poke_id ).slice( -3 )+'.png';
         }
 /*
         if (poke_id <= 721 || poke_id >= 808){

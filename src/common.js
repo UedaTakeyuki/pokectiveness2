@@ -2,13 +2,13 @@ export default {
   l_lang: function(){
     switch(this.$lang){
       case "fr":
-        return "french";
+        return "fra";
       case "ja":
-        return "japanese";
+        return "jpn";
       case "zh":
-        return "chinese";
+        return "cht";
       default:
-        return "english";
+        return "eng";
     }
   },
   s_lang: function(){

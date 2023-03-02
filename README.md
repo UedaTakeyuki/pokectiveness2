@@ -51,3 +51,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - v3.0 firebase hosting
   - Netlify:  pokectiveness2 CNAME pokectiveness2.netlify.com.
   - firebase: pokectiveness2 A 151.101.1.195
+- v4.0 Supports up to 9th generation (No.810 - No.1008)
+  - Add News
+  - The German language support

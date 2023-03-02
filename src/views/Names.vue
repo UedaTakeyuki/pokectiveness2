@@ -16,8 +16,9 @@
 </template>
 
 <script>
-import pokemons from '../pokedex';
-import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+//import pokemons from '../pokedex';
+//import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+import pokemon_json from '../pokedex'
 
 import pokemons_alola from '../alola';
 //let pokemons = require('../pokedex');
@@ -32,31 +33,17 @@ export default {
   components: {NameButton},
   data: function () {
     return {
-      pokemon_json: pokemon_json,
-
-      pokemons: pokemons,
-      pokemons_alola: pokemons_alola,
     }
   },
   methods: {
     pokemon_whose_name_start_with(str){
-//      return pokemons.filter(member => this.is_start_with(member.name[this.l_lang][0],str));
-//      pokemon_json.filter(member => console.log(member.id, member.name[this.l_lang][0], member.name[this.l_lang]));
+      console.log("pokemon_json", pokemon_json)
       return pokemon_json.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
     },
     pokemon_alola_whose_name_start_with(str){
-//      return list.filter(member => this.is_start_with(member.name.japanese[0],str));
       return pokemons_alola.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
     },
     is_start_with(c, str){
-      /*
-      for (let i in str.split("")){
-        if (c == str[i]){
-          return true;
-        }
-      }
-      return false;
-      */
       return c === str
     },
   },

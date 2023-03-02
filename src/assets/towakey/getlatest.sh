@@ -1,0 +1,1 @@
+svn export https://github.com/towakey/pokedex/trunk/pokedex/pokedex.json

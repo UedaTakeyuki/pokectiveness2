@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import pokedex from './pokedex'
+//import pokedex from './pokedex'
 import Navbar from '@/components/Navbar'
 
 export default {
@@ -23,7 +23,7 @@ export default {
   components: {Navbar},
   data () {
     return {
-      poke: pokedex
+//      poke: pokedex
       //
     }
   }

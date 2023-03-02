@@ -1,0 +1,1 @@
+file: https://github.com/towakey/pokedex/blob/master/pokedex/pokedex.json
