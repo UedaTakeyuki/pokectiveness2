@@ -137,8 +137,8 @@ Forum is available at [hire](http://www.uedasoft.com/forums/forum/pokectiveness2
 Pokéctiveness2 uses the following services, open source libraries and resources. I will introduce you while giving gratitude to this
 
 - [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
-- [Pokemon.json](https://github.com/fanzeyi/pokemon.json)
-- [pokemon_json](https://github.com/johnuberbacher/pokemon_json)
+- [PokedexJSON](https://github.com/Ed0ardo/PokedexJSON)
+- [pokedex](https://github.com/towakey/pokedex)
 - [Vue](https://github.com/vuejs/vue)
 - [Vuetify](https://github.com/vuetifyjs/vuetify)
 - [VuePress](https://github.com/vuejs/vuepress)

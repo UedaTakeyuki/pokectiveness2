@@ -135,8 +135,8 @@ Pokéctiveness2 に関するご質問、ご要望などご自由にご利用く�
 Pokéctiveness2 は以下のサービス、オープンソースのライブラリやリソースを使わせていただいております。ここに感謝の意を捧げつつ、ご紹介させていただきます
 
 - [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
-- [Pokemon.json](https://github.com/fanzeyi/pokemon.json)
-- [pokemon_json](https://github.com/johnuberbacher/pokemon_json)
+- [PokedexJSON](https://github.com/Ed0ardo/PokedexJSON)
+- [pokedex](https://github.com/towakey/pokedex)
 - [Vue](https://github.com/vuejs/vue)
 - [Vuetify](https://github.com/vuetifyjs/vuetify)
 - [VuePress](https://github.com/vuejs/vuepress)
