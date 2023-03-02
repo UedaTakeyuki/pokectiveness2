@@ -9,7 +9,9 @@
         March 2, 2023
       </v-card-subtitle>
       <v-card-text>
-        The Pokémons of Generation 9 are supported. Supported Pokémons are #0001 - "1008.
+        The Pokémons of Generation 9 are supported. 
+        Supported Pokémons are from <router-link :to="{name: 'pokemon', params: { id: 1 }}">#0001</router-link>
+        to <router-link :to="{name: 'pokemon', params: { id: 1008 }}">1008</router-link>.
       </v-card-text>
     </v-card>
   </div>
