@@ -96,7 +96,12 @@ func main() {
 	for _, towakeyBody := range towakeyJson.Pokedex {
 		id := towakeyBody.ID
 		log.Println("id", id)
-		idStr := fmt.Sprintf("%04d", id)
+		var idStr string
+		if id < 1000 {
+			idStr = fmt.Sprintf("%03d", id)
+		} else {
+			idStr = fmt.Sprintf("%d", id)
+		}
 		EdOardoBody := EdOardoJson[idStr]
 		log.Println("idStr", idStr)
 		log.Println("EdOardoBody", EdOardoBody)
@@ -105,7 +110,7 @@ func main() {
 		pokedexBody := pokedexBodyType{
 			ID:    towakeyBody.ID,
 			Name:  towakeyBody.Name,
-			Type:  EdOardoBody.Types,
+			Type:  EdOardoBody.Types, //EdOardoBody.Types,
 			Photo: EdOardoBody.Photo,
 			Desc:  EdOardoBody.Desc,
 		}
@@ -116,6 +121,7 @@ func main() {
 
 	var pokedexJson []byte
 	// https://stackoverflow.com/a/19038873/11073131
+	//pokedexJson, err = json.Marshal(pokedex)
 	pokedexJson, err = json.MarshalIndent(pokedex, "", "    ")
 	if err != nil {
 		log.Println(err)

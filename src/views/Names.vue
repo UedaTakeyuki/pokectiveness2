@@ -17,7 +17,8 @@
 
 <script>
 //import pokemons from '../pokedex';
-import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+//import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+import pokemon_json from '../pokedex'
 
 import pokemons_alola from '../alola';
 //let pokemons = require('../pokedex');
@@ -36,6 +37,7 @@ export default {
   },
   methods: {
     pokemon_whose_name_start_with(str){
+      console.log("pokemon_json", pokemon_json)
       return pokemon_json.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
     },
     pokemon_alola_whose_name_start_with(str){

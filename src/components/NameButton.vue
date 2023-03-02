@@ -18,7 +18,8 @@
 
 <script>
 //import pokemons from '../pokedex';
-import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+//import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
+import pokemon_json from '../pokedex'
 
 //import types from '@/typeeffectiveness';
 import common from '../common'; // common routines
