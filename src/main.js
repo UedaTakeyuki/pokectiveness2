@@ -3,6 +3,7 @@ import vuetify from './plugins/vuetify';
 import App from './App.vue';
 import router from './router';
 import './registerServiceWorker';
+import numberOfNews from './numberOfNews'
 
 Vue.config.productionTip = false;
 //Vue.prototype.$lang = (function(){
@@ -30,15 +31,25 @@ const get_browser_lang = () => {
 };
 //})();
 
+// number of News
+//const numberOfNews = 1
+
 // https://stackoverflow.com/questions/49256765/change-vue-prototype-variable-in-all-components
 let globalData = new Vue({
-  data: { $lang: get_browser_lang()}
+  data: {
+    $lang: get_browser_lang(),
+    $numberOfUnread: numberOfNews - localStorage.getItem('numberOfReadNews')
+  }
 });
 Vue.mixin({
   computed: {
     $lang: {
       get: function () { return globalData.$data.$lang },
       set: function (newLang) { globalData.$data.$lang = newLang; }
+    },
+    $numberOfUnread:{
+      get: function () { return globalData.$data.$numberOfUnread },
+      set: function (newVal) { globalData.$data.$numberOfUnread = newVal; }
     }
   }
 })

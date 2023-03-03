@@ -16,3 +16,14 @@
     </v-card>
   </div>
 </template>
+
+<script>
+import numberOfNews from '../numberOfNews'
+
+export default {
+  mounted(){
+    localStorage.setItem("numberOfReadNews", numberOfNews)
+    this.$numberOfUnread = 0
+  }
+}
+</script>

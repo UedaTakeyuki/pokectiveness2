@@ -6,9 +6,17 @@
         <span class="font-weight-light" style="font-family: 'Parisienne', cursive; text-shadow: 4px 4px 4px #aaa; font-size: 110%;">Pokéctiveness2</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text class="grey--text" @click="$router.push('news')">
-        News
-      </v-btn>
+      <v-badge
+        :content="$numberOfUnread"
+        color="grey"
+        offset-x="15"
+        offset-y="15"
+        v-if="$numberOfUnread != 0"
+      >
+        <v-btn text class="grey--text" @click="$router.push('news')">
+          News
+        </v-btn>
+      </v-badge>
       <v-btn text class="grey--text" v-if="$route.name != 'home'" @click="$router.back()">
         <v-icon>arrow_back</v-icon><span>{{wordings.navbar.back[s_lang]}}</span>
       </v-btn>
