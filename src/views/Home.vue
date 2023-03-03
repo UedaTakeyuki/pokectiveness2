@@ -144,11 +144,11 @@ export default {
       this.openedPanel.push(2)
     }
 //    this.panel = localStorage.panel
+    console.log("window", window)
   }
 
 
 }
-
 </script>
 
 <style>

@@ -16,6 +16,7 @@ module.exports = {
       vuetify: 'Vuetify',
 //      'vuetify/lib': 'Vuetify',
       'vue-router': 'VueRouter',
+      'data-for-pokectiveness': 'Pokedex',
     })
   }
 }
