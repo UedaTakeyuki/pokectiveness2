@@ -50,6 +50,7 @@ import Raid from '@/components/Raid'
 //import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
 //import pokemon_json from '../pokedex'
 import {pokedex} from 'data-for-pokectiveness'
+import first_letter_cht from '../first_letter_cht.js'
 
 //module.exports = {
 export default {
@@ -79,8 +80,8 @@ export default {
 */
         ja:
 //        Array.from(new Set(pokemon_json.map(p => p.name.jpn[0]))).sort(function(x,y){return x.localeCompare(y, 'ja')}).map(p => [p,p]),
-        Array.from(new Set(pokedex.map(p => p.name.jpn[0]))).sort(function(x,y){return x.localeCompare(y, 'ja')}).map(p => [p,p]),
-/*
+//        Array.from(new Set(pokedex.map(p => p.name.jpn[0]))).sort(function(x,y){return x.localeCompare(y, 'ja')}).map(p => [p,p]),
+
         [["あ","ア"],["い","イ"],["う","ウ"],["え","エ"],["お","オ"],
         ["か","カガ"],["き","キギ"],["く","クグ"],["け","ケゲ"],["こ","コゴ"],
         ["さ","サザ"],["し","シジ"],["す","スズ"],["せ","セゼ"],["そ","ソゾ"],
@@ -92,24 +93,26 @@ export default {
         ["ら","ラ"],["り","リ"],["る","ル"],["れ","レ"],["ろ","ロ"],
         ["わ","ワ"]
         ],
-*/
+
         en:
 //        Array.from(new Set(pokemon_json.map(p => p.name.eng[0]))).sort(function(x,y){return x.localeCompare(y, 'en')}).map(p => [p,p]),
-        Array.from(new Set(pokedex.map(p => p.name.eng[0]))).sort(function(x,y){return x.localeCompare(y, 'en')}).map(p => [p,p]),
-/*
+//        Array.from(new Set(pokedex.map(p => p.name.eng[0]))).sort(function(x,y){return x.localeCompare(y, 'en')}).map(p => [p,p]),
+
         [["A","A"],["B","B"],["C","C"],["D","D"],["E","E"],["F","F"],["G","G"],
         ["H","H"],["I","I"],["J","J"],["K","K"],["L","L"],["M","M"],["N","N"],
         ["O","O"],["P","P"],["Q","Q"],["R","R"],["S","S"],["T","T"],["U","U"],
         ["V","V"],["W","W"],["X","X"],["Y","Y"],["Z","Z"]
         ],
-*/
+
         // https://stackoverflow.com/questions/22907288/chinese-sorting-by-pinyin-in-javascript-with-localecompare
         zh:
 //        Array.from(new Set(pokemon_json.map(p => p.name.cht[0]))).sort(function(x,y){return x.localeCompare(y, 'zh')}).map(p => [p,p]),
-        Array.from(new Set(pokedex.map(p => p.name.cht[0]))).sort(function(x,y){return x.localeCompare(y, 'zh')}).map(p => [p,p]),
+//        Array.from(new Set(pokedex.map(p => p.name.cht[0]))).sort(function(x,y){return x.localeCompare(y, 'zh')}).map(p => [p,p]),
+        first_letter_cht,
         fr:
 //        Array.from(new Set(pokemon_json.map(p => p.name.fra[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
-        Array.from(new Set(pokedex.map(p => p.name.fra[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
+//        Array.from(new Set(pokedex.map(p => p.name.fra[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
+        [["A","A"],["B","B"],["C","C"],["D","D"],["E","E"],["É","É"],["F","F"],["G","G"],["H","H"],["I","I"],["J","J"],["K","K"],["L","L"],["M","M"],["N","N"],["O","O"],["P","P"],["Q","Q"],["R","R"],["S","S"],["T","T"],["U","U"],["V","V"],["W","W"],["X","X"],["Y","Y"],["Z","Z"]],
       }
     } 
   },
@@ -149,7 +152,7 @@ export default {
       this.openedPanel.push(2)
     }
 //    this.panel = localStorage.panel
-    console.log("window", window)
+//    console.log("window", window)
   }
 
 
