@@ -1,4 +1,6 @@
 // https://projectpokemon.org/home/docs/spriteindex_148/3d-models-generation-7-pok%C3%A9mon-r96/
+//   {"id":, "url":""}
+
 export default [
   {"id":720, "url":"https://projectpokemon.org/images/normal-sprite/hoopa.gif"},
   {"id":721, "url":"https://projectpokemon.org/images/normal-sprite/volcanion.gif"},
@@ -9,4 +11,5 @@ export default [
   {"id":726, "url":"https://projectpokemon.org/images/normal-sprite/torracat.gif"},
   {"id":727, "url":"https://projectpokemon.org/images/normal-sprite/incineroar.gif"},
   {"id":728, "url":"https://projectpokemon.org/images/normal-sprite/popplio.gif"},
+
 ]
