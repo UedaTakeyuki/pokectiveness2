@@ -1,5 +1,7 @@
 // https://projectpokemon.org/home/docs/spriteindex_148/3d-models-generation-7-pok%C3%A9mon-r96/
 export default [
+  {"id":720, "url":"https://projectpokemon.org/images/normal-sprite/hoopa.gif"},
+  {"id":721, "url":"https://projectpokemon.org/images/normal-sprite/volcanion.gif"},
   {"id":722, "url":"https://projectpokemon.org/images/normal-sprite/rowlet.gif"},
   {"id":723, "url":"https://projectpokemon.org/images/normal-sprite/dartrix.gif"},
   {"id":724, "url":"https://projectpokemon.org/images/normal-sprite/decidueye.gif"},
