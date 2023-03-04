@@ -42,11 +42,11 @@ type towakeyNameType struct {
 }
 
 type pokedexBodyType struct {
-	ID    int             `json:"id"` //1,
-	Name  towakeyNameType `json:"name"`
-	Type  []string        `json:"type"`
-	Photo string          `json:"photo"`
-	Desc  string          `json:"desc"`
+	ID   int             `json:"id"` //1,
+	Name towakeyNameType `json:"name"`
+	Type []string        `json:"type"`
+	//	Photo string          `json:"photo"`
+	//	Desc  string          `json:"desc"`
 }
 
 func main() {
@@ -108,11 +108,11 @@ func main() {
 		log.Println("towakeyBody", towakeyBody)
 
 		pokedexBody := pokedexBodyType{
-			ID:    towakeyBody.ID,
-			Name:  towakeyBody.Name,
-			Type:  EdOardoBody.Types, //EdOardoBody.Types,
-			Photo: EdOardoBody.Photo,
-			Desc:  EdOardoBody.Desc,
+			ID:   towakeyBody.ID,
+			Name: towakeyBody.Name,
+			Type: EdOardoBody.Types, //EdOardoBody.Types,
+			//			Photo: EdOardoBody.Photo,
+			//			Desc:  EdOardoBody.Desc,
 		}
 		log.Println("pokedexBody", pokedexBody)
 
