@@ -47,6 +47,7 @@ import wordings from '../wording'; // wording definitions
 import {pokedex} from 'data-for-pokectiveness'
 const pokemon_json = pokedex
 import types_json from '@/assets/johnuberbacher_types.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/types.json
+import anime from '@/anime' 
 
 
 //module.exports = {
@@ -83,10 +84,14 @@ export default {
         if (poke_id <= 721){
           return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
         } else {
-          if (poke_id < 1000){
-            return 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+('000' + poke_id ).slice( -3 )+'.png';
+          if (poke_id <= 728){
+            return anime.filter(function(element){return (element.id == poke_id);})[0].url
           } else {
-            return 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+ poke_id +'.png';
+            if (poke_id < 1000){
+              return 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+('000' + poke_id ).slice( -3 )+'.png';
+            } else {
+              return 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+ poke_id +'.png';
+            }
           }
 //          return 'https://assets.uedasoft.com/Pokemon/pokemon_json/images/pokedex/thumbnails/'+('000' + poke_id ).slice( -3 )+'.png';
         }
