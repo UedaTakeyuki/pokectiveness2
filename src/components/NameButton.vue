@@ -19,7 +19,8 @@
 <script>
 //import pokemons from '../pokedex';
 //import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
-import pokemon_json from '../pokedex'
+//import pokemon_json from '../pokedex'
+import {pokedex} from 'data-for-pokectiveness'
 
 //import types from '@/typeeffectiveness';
 import common from '../common'; // common routines
@@ -45,7 +46,8 @@ export default {
       }
     },
     nameString(id){
-      return pokemon_json[id - 1].name[this.lang]
+//      return pokemon_json[id - 1].name[this.lang]
+      return pokedex[id - 1].name[this.lang]
     },
     alolaNameString(){
       return this.alola ? wordings.alola_general.alolan_form_str[this.s_lang] : ""

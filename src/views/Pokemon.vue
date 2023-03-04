@@ -43,7 +43,9 @@ import TypeButton from '@/components/TypeButton'
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
 //import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
-import pokemon_json from '../pokedex'
+//import pokemon_json from '../pokedex'
+import {pokedex} from 'data-for-pokectiveness'
+const pokemon_json = pokedex
 import types_json from '@/assets/johnuberbacher_types.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/types.json
 
 

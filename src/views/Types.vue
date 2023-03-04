@@ -55,7 +55,9 @@
 </template>
 
 <script>
-import pokemons from '../pokedex';
+//import pokemons from '../pokedex';
+import {pokedex} from 'data-for-pokectiveness'
+const pokemons = pokedex
 import pokemons_alola from '../alola';
 import types from '../typeeffectiveness';
 import TypeButton from '@/components/TypeButton'
