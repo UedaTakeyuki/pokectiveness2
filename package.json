@@ -16,7 +16,6 @@
     "sass-loader": "10.1.1",
     "vue": "2.7",
     "vue-router": "^3.0.1",
-    "vuepress": "^1.0.0-alpha.48",
     "vuetify": "^2.5.4"
   },
   "devDependencies": {
@@ -31,6 +30,7 @@
     "vue-cli-plugin-vuetify": "^0.6.1",
     "vue-ga": "^1.1.0",
     "vue-template-compiler": "2.7",
+    "vuepress": "^1.9.9",
     "vuepress-plugin-google-adsense": "0.0.3"
   },
   "eslintConfig": {
