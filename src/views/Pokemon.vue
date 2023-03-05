@@ -84,7 +84,7 @@ export default {
         if (poke_id <= 719){
           return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
         } else {
-          if (poke_id <= 728){
+          if (poke_id <= 750){
             return anime.filter(function(element){return (element.id == poke_id);})[0].url
           } else {
             if (poke_id < 1000){
