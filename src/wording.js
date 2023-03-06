@@ -17,13 +17,13 @@ export default {
     types: {
       ja: "種族一覧",
       en: "Types",
-      zh: "种族列表"
+      zh: "属性列表"
     },
     thistypes: {
       ja: "この種族のポケモン",
       en: "This types",
       fr: "Ce type de pokémon",
-      zh: "本种族的宝可梦"
+      zh: "本属性的宝可梦"
     }
   },
   settings: {
@@ -39,7 +39,7 @@ export default {
       ja: "種族",
       en: "Type",
       fr: "Type",
-      zh: "种族"
+      zh: "属性"
     }
   },
   alola_general: {

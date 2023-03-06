@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="grey--text text-h5 pt-3 pl-3" >News</p>
-    <v-card>
+    <v-card class="ma-1">
       <v-card-title>
         Generation 7 Pokémons images are now moving.
       </v-card-title>
@@ -15,7 +15,7 @@
       </v-card-text>
     </v-card>
 
-    <v-card>
+    <v-card class="ma-1">
       <v-card-title>
         Generation 9 are now supported.
       </v-card-title>
