@@ -27,7 +27,7 @@
 
       <v-expansion-panel>
         <v-expansion-panel-header>
-          メモ
+          Memo for Raid Battle
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <Feed/>
@@ -40,11 +40,31 @@
     <v-card class="mt-auto mb-2 mx-2">
       <v-card-subtitle>hint:</v-card-subtitle>
       <v-card-text>
-You can find <b>effective move types</b> against your <b>enemy pokémon</b> as follow:<br>
-
-1. Select the name of enemy with the <b>Name</b> tab at the top.<br>
-
-2. So, you can find it, that's it.<br>
+        <div v-if="$lang == 'en'">
+          You can find <b>effective move types</b> against your <b>enemy pokémon</b> as follow:<br>
+          1. Select the enemy's name with the <b>Name</b> tab at the top.<br>
+          2. So, you can find it, that's it.
+        </div>
+        <div v-if="$lang == 'ja'">
+          対戦相手のポケモンに効果的な技タイプの探し方<br>
+          1. 上の<b>名前</b>タブで相手の名前を選びます<br>
+          2. 技の相性が表示されます、それだけ<br>
+        </div>
+        <div v-if="$lang == 'fr'">
+        Vous pouvez trouver des <b>types de mouvement efficaces</b> contre votre <b>pokémon ennemi</b> comme suit :<br>
+        1. Sélectionnez le nom de l'ennemi avec l'onglet <b>Nom</b> en haut.<br>
+        2. Donc, vous pouvez le trouver, c'est tout.
+        </div>
+        <div v-if="$lang == 'de'">
+        Sie können wie folgt wirksame Bewegungsarten gegen Ihre feindlichen Pokémon finden:<br>
+        1. Wählen Sie oben auf der Registerkarte Name den <b>Namen</b> des Feindes aus.<br>
+        2. Also, du kannst es finden, das war's.
+        </div>
+        <div v-if="$lang == 'zh'">
+        您可以找到對付敵方神奇寶貝的有效招式，如下所示：<br>
+        1. 使用頂部的名稱選項卡選擇敵人的名稱<br>
+        2. 所以，你可以找到它，就是這樣
+        </div>
       </v-card-text>
     </v-card>
 
