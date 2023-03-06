@@ -1,3 +1,3 @@
-const numberOfNews = 1
+const numberOfNews = 2
 
 export default numberOfNews
