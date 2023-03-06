@@ -10,7 +10,7 @@ export default {
       ja: "種族",
       en: "Type",
       fr: "Type",
-      zh: "种族"
+      zh: "属性"
     }
   },
   types: {
