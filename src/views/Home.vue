@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home d-flex flex-column">
     <v-expansion-panels v-model="openedPanel" multiple accordion tile>
       <v-expansion-panel>
         <v-expansion-panel-header>
@@ -36,6 +36,17 @@
       </v-expansion-panel>
 
     </v-expansion-panels>
+
+    <v-card class="mt-auto mb-2 mx-2">
+      <v-card-subtitle>hint:</v-card-subtitle>
+      <v-card-text>
+You can find <b>effective move types</b> against your <b>enemy pokémon</b> as follow:<br>
+
+1. Select the name of enemy with the <b>Name</b> tab at the top.<br>
+
+2. So, you can find it, that's it.<br>
+      </v-card-text>
+    </v-card>
 
   </div>
 </template>
@@ -173,5 +184,8 @@ export default {
 }
 .v-footer {
   text-align: center;
+}
+.home {
+  height: 100%;
 }
 </style>
