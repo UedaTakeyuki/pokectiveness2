@@ -207,7 +207,7 @@ export default
 	},
 	wording: {
 		en:{
-				opponent: "Opponent: ",
+				opponent: "Enemy: ",
 				select: " (Touch here)",
 				chose: "Choose Types",
 				supper: "Super-effective!",
@@ -231,8 +231,8 @@ export default
 			no: "免疫的！",
 		},
 		fr:{
-			opponent: "Opponent: ",
-			select: " (Touch here)",
+			opponent: "Ennemi: ",
+			select: " (Touchez ici)",
 			chose: "Choose Types",
 			supper: "Très Efficace !",
 			not: "Résistances !",
