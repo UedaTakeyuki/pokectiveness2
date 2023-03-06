@@ -6,7 +6,7 @@ margin: 32px;
 filter: drop-shadow (10px 10px 5px silver);
 }
 </style>
-Pokéctiveness2 is a web application that examines your opponent pokémon's weaknesses in order to advance your battle. You can find the opponent's weaknesses and [double weakness](#double-weakness) to advance the battle in an advantageous manner.
+Pokéctiveness2 is a web application that examines enemy pokémon's weaknesses to win the battle. You can find the enemy's weaknesses and [double weakness](#double-weakness) to advance the battle advantageously.
 
 You can use it on your smartphone without installing it, and if you register it on the [Home screen](#register-this-app-on-your-smartphone-home-screen), you can start it up and use it just like a normal application.
 
@@ -17,7 +17,7 @@ Weaknesses can be found with the opponent's [name](#find-by-name) or [species](#
 </div>
 
 ### Find by name
-Selecting "Name", fist of all please select the first letter of the other party's name from here.
+Selecting "Name", first of all please select the first letter of the other party's name from here.
 <div class = "img-wrapper">
   <img src = "/docs/pics/2019-05-30 20.44.05.png" width = "80%">
 </div>
@@ -30,17 +30,17 @@ You will see the Pokemon's race and the type of move that will be the weakness o
 <div class = "img-wrapper">
   <img src = "/docs/pics/2019-05-30 20.45.05.png" width = "80%">
 </div>
-If you touch the displayed race or move , [More information](#find-by-race) will be displayed.
+If you touch the displayed race or move, [More information](#find-by-race) will be displayed.
 
 ### Double weakness
-Pokemon who has two type of race may have a move type of common weakness against both race. This type of move is called **double weakness**. For example, in the case of Garados, the **electric** move contained in both the WATER and FLYING, so the electric move is a double weakness
+Pokemon who has two types of race may have a move type of common weakness against both races. This type of move is called **double weakness**. For example, in the case of Garados, the **electric** move contained in both the WATER and FLYING, so the electric move is a double weakness
 <div class = "img-wrapper">
   <img src = "/docs/pics/2019-05-30 20.45.47.png" width = "80%">
 </div>
 Attacks with double weakness move are more powerful than attacks with normal weaknesses. Finding the opponent's double weakness is the key to advancing the battle
 
 ### Find by race
-Fist of all, please touch "Type", then select from the list.
+First of all, please touch "Type", then select from the list.
 <div class = "img-wrapper">
   <img src = "/docs/pics/2019-05-30 20.46.01.png" width = "80%">
 </div>
@@ -77,7 +77,7 @@ The side menu contains the following items
 If you add the Pokéctiveness2 icon to the smartphone's **home screen**, you can launch and use it with just one click like a normal application.
 
 ### For iOS
-From the menu at the bottom of the screen, tap the **square icon which the arrow pointing up from**.
+From the menu at the bottom of the screen, tap the **square icon which the **arrow points** from**.
 <div class="img-wrapper">
 	<img src="/docs/pics/share_eng.png" width="80%">  
 </div>
@@ -89,12 +89,12 @@ Tap **Add** on the upper right corner of the screen.
 <div class = "img-wrapper">
   <img src = "/docs/pics/add_eng.png" width = "80%">
 </div>
-Pokéctiveness2 icon is added to home screen
+The Pokéctiveness2 icon is added to the home screen
 <div class = "img-wrapper">
   <img src = "/docs/pics/home.png" width = "80%">
 </div>
 
-### For Androdi
+### For Android
 Tap the menu key on the device or the menu button (three vertical points) in the upper right corner of the screen
 <div class = "img-wrapper">
   <img src = "/docs/pics/android_menubutton_eng.png" width = "80%">
@@ -107,7 +107,7 @@ Tap **Add** on the bottom right of the dialog
 <div class = "img-wrapper">
   <img src = "/docs/pics/android_add_eng.png" width = "80%">
 </div>
-Pokéctiveness2 icon is added to home screen
+The Pokéctiveness2 icon is added to the home screen
 <div class = "img-wrapper">
   <img src = "/docs/pics/android_screen.png" width = "80%">
 </div>
@@ -130,11 +130,11 @@ By tapping the hamburger menu, you can display the QR code of Pokéctiveness2 on
 
 ## Forum
 Forum is available at [hire](http://www.uedasoft.com/forums/forum/pokectiveness2/)  
-[Q&A](), [Issue Report](), and [Feature Request]() are prepared, and please make new topic as you like.
+[Q&A](), [Issue Report](), and [Feature Request]() are prepared, and please make a new topic as you like.
 
 
 ## Acknowledgments
-Pokéctiveness2 uses the following services, open source libraries and resources. I will introduce you while giving gratitude to this
+Pokéctiveness2 uses the following services, open-source libraries and resources. I will introduce you while giving gratitude for this
 
 - [ProfesseurOak](https://github.com/Incien104/ProfesseurOak)
 - [PokedexJSON](https://github.com/Ed0ardo/PokedexJSON)
