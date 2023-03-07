@@ -18,7 +18,7 @@
         </v-btn>
       </v-badge>
       <v-btn text class="grey--text" v-if="$route.name != 'home'" @click="$router.back()">
-        <v-icon>arrow_back</v-icon><span>{{wordings.navbar.back[s_lang]}}</span>
+        <v-icon>{{mdiArrowLeft}}</v-icon><span>{{wordings.navbar.back[s_lang]}}</span>
       </v-btn>
     </v-toolbar>
 
@@ -76,7 +76,7 @@
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
 // https://knote.dev/post/2021-02-21/vuetify-no-assets/
-import { mdiHome } from "@mdi/js";
+import { mdiHome, mdiArrowLeft} from "@mdi/js";
 
 export default {
   data(){
@@ -105,6 +105,7 @@ export default {
         zh: {icon: '', text: 'メモ', route: '/memo'},
       },
       mdiHome: mdiHome,
+      mdiArrowLeft: mdiArrowLeft,
     }
   },
   computed: {
