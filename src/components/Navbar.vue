@@ -37,7 +37,7 @@
         </v-layout>
         <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
           <v-list-item-action>
-            <v-icon class="white--text">{{link.icon}}</v-icon>
+            <v-icon class="white--text">{{mdiHome}}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="white--text">{{link.text}}</v-list-item-title>
@@ -75,6 +75,8 @@
 <script>
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
+// https://knote.dev/post/2021-02-21/vuetify-no-assets/
+import { mdiHome } from "@mdi/js";
 
 export default {
   data(){
@@ -82,7 +84,7 @@ export default {
       wordings: wordings,
       drawer: false,
       links: [
-        {icon: 'home', text: 'Home', route: '/'},
+        {icon: 'mdiHome', text: 'Home', route: '/'},
       ],
       doc_links: {
         en: {icon: '', text: 'How To Use', route: '/docs'},
@@ -102,6 +104,7 @@ export default {
         ja: {icon: '', text: 'メモ', route: '/memo'},
         zh: {icon: '', text: 'メモ', route: '/memo'},
       },
+      mdiHome: mdiHome,
     }
   },
   computed: {
