@@ -72,16 +72,23 @@
 </template>
 
 <script>
-import types from '../typeeffectiveness';
-import TypeButton from '@/components/TypeButton'
+//import types from '../typeeffectiveness';
+const types = () => import('../typeeffectiveness')
+//import TypeButton from '@/components/TypeButton'
+const TypeButton = () => import('@/components/TypeButton')
 import common from '../common'; // common routines
+//const common = () => import('../common')
 import wordings from '../wording'; // wording definitions
-import Feed from '@/components/Feed'
-import Raid from '@/components/Raid'
+//const wordings = () => import( '../wording')
+//import Feed from '@/components/Feed'
+const Feed = () => import(  '@/components/Feed')
+//import Raid from '@/components/Raid'
+const Raid = () => import( '@/components/Raid')
 //import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
 //import pokemon_json from '../pokedex'
 import {pokedex} from 'data-for-pokectiveness'
-import first_letter_cht from '../first_letter_cht.js'
+//import first_letter_cht from '../first_letter_cht.js'
+const first_letter_cht = () => import( '../first_letter_cht.js')
 
 //module.exports = {
 export default {
