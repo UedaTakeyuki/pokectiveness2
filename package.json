@@ -18,7 +18,8 @@
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuepress": "^1.0.0-alpha.48",
-    "vuetify": "^2.5.4"
+    "vuetify": "^2.5.4",
+    "vuetify-loader": "^1.9.2"
   },
   "devDependencies": {
     "@mdi/js": "^7.1.96",
