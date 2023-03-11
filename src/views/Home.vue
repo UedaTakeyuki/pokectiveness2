@@ -78,10 +78,10 @@ import TypeButton from '@/components/TypeButton'
 //const TypeButton = () => import('@/components/TypeButton')
 import common from '../common'; // common routines
 import wordings from '../wording'; // wording definitions
-import Feed from '@/components/Feed'
-//const Feed = () => import(  '@/components/Feed')
-import Raid from '@/components/Raid'
-//const Raid = () => import( '@/components/Raid')
+//import Feed from '@/components/Feed'
+const Feed = () => import(  '@/components/Feed')
+//import Raid from '@/components/Raid'
+const Raid = () => import( '@/components/Raid')
 //import pokemon_json from '@/assets/johnuberbacher_pokemon.json' // https://raw.githubusercontent.com/johnuberbacher/pokemon_json/main/pokemon.json
 //import pokemon_json from '../pokedex'
 //import {pokedex} from 'data-for-pokectiveness'

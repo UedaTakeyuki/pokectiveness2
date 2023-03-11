@@ -6,7 +6,7 @@ import Pokemon from './views/Pokemon.vue'
 import Names from './views/Names.vue'
 import News from './views/News.vue'
 import Memo from './views/Memo.vue'
-import Settings from './views/Settings.vue'
+//import Settings from './views/Settings.vue'
 //import Pokemon_alola from './views/Pokemon_alola.vue'
 import ga from 'vue-ga'
 //import pokedex from './pokedex'
@@ -60,7 +60,8 @@ const router =  new Router({
     {
       path: '/settings',
       name: 'settings',
-      component:Settings,
+      component: () => import(/* webpackChunkName: "settings" */ './views/Settings.vue'),
+//      component:Settings,
       props: {}
 //      props: {poke: name_a}
     },
