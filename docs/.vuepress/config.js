@@ -1,6 +1,25 @@
 module.exports = {
   title: 'Pokéctiveness2',
   description: 'Pokémon move effectiveness chart.',
+
+  // https://github.com/vuejs/vuepress/issues/2713#issuecomment-806621348
+  head: [
+    [
+        'script',
+        {
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-YK7D4V8XHW',
+        },
+    ],
+    [
+        'script',
+        {},
+        [
+            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-YK7D4V8XHW');",
+        ],
+    ],
+  ],
+  
 //  dest: 'dist/docs',
   dest: 'public/docs',
   base: '/docs/',
