@@ -17,6 +17,9 @@ module.exports = {
 //      'vuetify/lib': 'Vuetify',
       'vue-router': 'VueRouter',
       'data-for-pokectiveness': 'Pokedex',
-    })
+    }),
+    // https://stackoverflow.com/a/56866708/11073131
+    config.plugins.delete('pwa');
+    config.plugins.delete('workbox');
   }
 }
