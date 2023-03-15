@@ -109,12 +109,14 @@ export default {
     have_passed: {
       ja: "経過",
       en: " have passed.",
+      de: " have passed.",
       fr: " que j'ai donné des fruits",
       zh: "钟过去了"
     },
     just_now: {
       ja: "今、実をあげた",
       en: "I gave fruit just now.",
+      de: "I gave fruit just now.",
       fr: "J'ai donné fruit maintenant.",
       zh: "现在给了水果",
     },
@@ -123,24 +125,28 @@ export default {
     to_start_raid: {
       ja: "レイド開始まで",
       en: "To start of the raid ",
+      de: "To start of the raid ",
       fr: "Avant de commencer à raid",
       zh: "レイド開始まで"
     },
     to_finish_raid: {
       ja: "レイド終了まで",
       en: "To finish the raid ",
+      de: "To finish the raid ",
       fr: "Avant de finir à raid",
       zh: "レイド終了まで",
     },
     since_form_finish: {
       ja: "レイド終了から",
       en: "Since from the finish of the raid ",
+      de: "Since from the finish of the raid ",
       fr: "Depuis la fin du raid",
       zh: "レイド終了から",
     },
     remaining: {
       ja: "レイド開始まで残り時間（分）",
       en: "Remaining time (minutes) until the start of the raid.",
+      de: "Remaining time (minutes) until the start of the raid.",
       fr: "Temps restant (minutes) jusqu'au début du raid",
       zh: "レイド開始まで残り時間（分）",
     },
