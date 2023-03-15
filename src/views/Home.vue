@@ -25,7 +25,7 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
 
-      <v-expansion-panel>
+      <v-expansion-panel v-if="$lang == 'ja' || $lang == 'zh'">
         <v-expansion-panel-header>
           Memo for Raid Battle
         </v-expansion-panel-header>
@@ -149,6 +149,10 @@ export default {
 //        Array.from(new Set(pokemon_json.map(p => p.name.fra[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
 //        Array.from(new Set(pokedex.map(p => p.name.fra[0]))).sort(function(x,y){return x.localeCompare(y, 'fr')}).map(p => [p,p])
         [["A","A"],["B","B"],["C","C"],["D","D"],["E","E"],["É","É"],["F","F"],["G","G"],["H","H"],["I","I"],["J","J"],["K","K"],["L","L"],["M","M"],["N","N"],["O","O"],["P","P"],["Q","Q"],["R","R"],["S","S"],["T","T"],["U","U"],["V","V"],["W","W"],["X","X"],["Y","Y"],["Z","Z"]],
+
+// made by makeFirstLetters on MyDeno
+        de:
+        [["A","A"],["B","B"],["C","C"],["D","D"],["e","e"],["E","E"],["F","F"],["G","G"],["H","H"],["I","I"],["J","J"],["K","K"],["L","L"],["M","M"],["N","N"],["O","O"],["P","P"],["Q","Q"],["R","R"],["S","S"],["T","T"],["U","U"],["V","V"],["W","W"],["X","X"],["Y","Y"],["Z","Z"]],
       }
     } 
   },

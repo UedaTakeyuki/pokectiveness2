@@ -5,25 +5,30 @@ export default {
       en: "Name",
       fr: "Nom",
       zh: "名",
+      de: "Name"
     },
     type: {
       ja: "種族",
       en: "Type",
       fr: "Type",
-      zh: "属性"
+      zh: "属性",
+      de: "Typ"
     }
   },
   types: {
     types: {
       ja: "種族一覧",
       en: "Types",
-      zh: "属性列表"
+      fr: "Les Types",
+      zh: "属性列表",
+      de: "Typen"
     },
     thistypes: {
       ja: "この種族のポケモン",
       en: "This types",
       fr: "Ce type de pokémon",
-      zh: "本属性的宝可梦"
+      zh: "本属性的宝可梦",
+      de: "Diese Typen"
     }
   },
   settings: {
@@ -31,7 +36,9 @@ export default {
       ja: "言語",
       en: "Language",
       fr: "Langue",
-      zh: "语"
+      zh: "语",
+      de: "Sprache"
+
     },
   },
   pokemon: {
@@ -39,7 +46,8 @@ export default {
       ja: "種族",
       en: "Type",
       fr: "Type",
-      zh: "属性"
+      zh: "属性",
+      de: "Typ"
     }
   },
   alola_general: {
@@ -47,7 +55,8 @@ export default {
       ja: " アローラのすがた",
       en: " alolan",
       fr: " alolan",
-      zh: " 阿羅拉的樣子"
+      zh: " 阿羅拉的樣子",
+      de: " alolan"
     }
   },
   navbar: {
@@ -55,13 +64,15 @@ export default {
       ja: "戻る",
       en: "Back",
       fr: "Revenir",
-      zh: "返回"
+      zh: "返回",
+      de: "Zurück"
     },
     qr: {
       ja: "このアプリの QRコード",
       en: "QR code for this app.",
       fr: "QR code pour cette application",
-      zh: "此应用程序的二维码"
+      zh: "此应用程序的二维码",
+      de: "QR-Code für diese App"
     }
   },
   time: {
@@ -69,19 +80,22 @@ export default {
       ja: "時間",
       en: " hour",
       fr: " heure",
-      zh: "時間"
+      zh: "時間",
+      de: " std."
     },
     minute: {
       ja: "分",
       en: " minute",
       fr: " minute",
-      zh: "分"
+      zh: "分",
+      de: "minuten"
     },
     second: {
       ja: "秒",
       en: " second",
       fr: " seconde",
-      zh: "秒"
+      zh: "秒",
+      de: " sekunden"
     },
   },
   feed:{
@@ -89,7 +103,8 @@ export default {
       ja: "実をあげてから",
       en: "Since I gave fruit ",
       fr: "Cela fait ",
-      zh: "给了水果"
+      zh: "给了水果",
+      de: "Das macht",
     },
     have_passed: {
       ja: "経過",

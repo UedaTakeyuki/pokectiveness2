@@ -3,6 +3,8 @@ export default {
     switch(this.$lang){
       case "fr":
         return "fra";
+      case "de":
+        return "ger";
       case "ja":
         return "jpn";
       case "zh":

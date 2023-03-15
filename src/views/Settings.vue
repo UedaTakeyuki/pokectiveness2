@@ -1,5 +1,6 @@
 <template>
   <div class="pokemon">
+    {{s_lang}}{{$lang}}{{lang}}
     <v-card>
       <v-select
         v-model="lang"
@@ -20,7 +21,7 @@ export default {
   data: function () {
     return {
       wordings: wordings,
-      langs: ['English','Français','日本語', '汉语'],
+      langs: ['English','Français','Deutsch','日本語', '汉语'],
       lang: "",
 //      lang: this.lang_setting2selectmenu(this.$lang),
 //      ↑ dont workd, this.$lang is not ready before created.
@@ -36,6 +37,9 @@ export default {
         case 'fr':
           result = 'Français';
           break;
+        case 'de':
+          result = 'Deutsch'
+          return
         case 'ja':
           result = '日本語'
           break;
@@ -57,6 +61,9 @@ export default {
           break;
         case 'Français':
           result = 'fr';
+          break;
+        case 'Deutsch':
+          result = 'de';
           break;
         case '日本語':
           result = 'ja'
