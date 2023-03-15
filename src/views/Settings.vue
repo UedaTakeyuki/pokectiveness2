@@ -39,7 +39,7 @@ export default {
           break;
         case 'de':
           result = 'Deutsch'
-          return
+          break
         case 'ja':
           result = '日本語'
           break;
