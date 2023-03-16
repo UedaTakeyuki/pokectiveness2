@@ -1,6 +1,5 @@
 <template>
   <div class="pokemon">
-    {{s_lang}}{{$lang}}{{lang}}
     <v-card>
       <v-select
         v-model="lang"
