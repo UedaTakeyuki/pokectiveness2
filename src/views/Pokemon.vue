@@ -17,6 +17,7 @@
       <div>和名：{{pokemon_json[id].name.jpn}}{{alola ? ' アローラのすがた' : ''}}</div>
       <div>English：{{pokemon_json[id].name.eng}}{{alola ? ' alolan' : ''}}</div>
       <div>Français：{{pokemon_json[id].name.fra}}{{alola ? ' alolan' : ''}}</div>
+      <div>Deutsch：{{pokemon_json[id].name.ger}}{{alola ? ' alolan' : ''}}</div>
       <div>中文：{{pokemon_json[id].name.cht}}{{alola ? ' 阿羅拉的樣子' : ''}}</div>
 <!--
       <div>和名：{{pokemons[id].name.japanese}}{{alola ? ' アローラのすがた' : ''}}</div>
