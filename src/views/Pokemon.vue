@@ -2,11 +2,7 @@
   <div class="pokemon">
     <v-card color="blue-grey darken-2" class="white--text">
       <h3>{{pokemon_json[$route.params.id - 1].name[l_lang]}}{{alolan_form_str}}</h3>
-      <v-img v-if="alola"
-          :src="require('@/'+image_path($route.params.id))"
-      >
-      </v-img>
-      <v-img v-else
+      <v-img
           :src="image_path($route.params.id)"
       >
       </v-img>
@@ -83,8 +79,8 @@ export default {
     },
     image_path: function(poke_id){
       if (this.alola) {
-        return 'assets/ProfesseurOak/img/alola/'+poke_id+'.png';
-//        return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'-alola.gif';
+        //return 'assets/ProfesseurOak/img/alola/'+poke_id+'.png';
+        return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'-alola.gif';
       } else {
         if (poke_id <= 719){
           return 'https://assets.uedasoft.com/Pokemon/ProfesseurOak/pokemon-img/normal-animated/'+('000' + poke_id ).slice( -3 )+'.gif';
