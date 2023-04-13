@@ -77,3 +77,5 @@
            stop PWA
 
 2023.03.30 add ads.txt
+
+2023.04.13 add 8th generation up to 865 Sirfetch'd
