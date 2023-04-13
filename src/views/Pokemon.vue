@@ -2,7 +2,11 @@
   <div class="pokemon">
     <v-card color="blue-grey darken-2" class="white--text">
       <h3>{{pokemon_json[$route.params.id - 1].name[l_lang]}}{{alolan_form_str}}</h3>
-      <v-img
+      <v-img v-if="alola"
+          :src="require('@/'+image_path($route.params.id))"
+      >
+      </v-img>
+      <v-img v-else
           :src="image_path($route.params.id)"
       >
       </v-img>
