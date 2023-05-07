@@ -39,13 +39,20 @@ export default {
   methods: {
     pokemon_whose_name_start_with(str){
 //      return pokemon_json.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
-      return pokedex.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
+      return pokedex.filter(member => this.is_start_with(member.name[this.l_lang][0],str));
     },
     pokemon_alola_whose_name_start_with(str){
-      return pokemons_alola.filter(member => this.is_start_with(member.name[this.l_lang][0],str[0]));
+      return pokemons_alola.filter(member => this.is_start_with(member.name[this.l_lang][0],str));
     },
     is_start_with(c, str){
-      return c === str
+      for (let i=0; i < str.length; i++) {
+        if (c == str[i]){
+          return true
+        }
+      }
+      return false
+
+//      return c === str
     },
   },
   computed: {
