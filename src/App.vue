@@ -8,7 +8,7 @@
 
     <v-footer app>
       <v-flex text-xs-center>
-        <div  class="grey--text">&copy; 2019 - <a href="https://www.uedasoft.com/">Atelier UEDA</a></div>
+        <div  class="grey--text">&copy; 2019 - <a href="https://atelierueda.uedasoft.com">Atelier UEDA</a></div>
       </v-flex>
     </v-footer>
   </v-app>
